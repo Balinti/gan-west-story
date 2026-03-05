@@ -15,14 +15,14 @@ export type Scene = {
 export const scenes: Record<string, Scene> = {
   opening: {
     id: "opening",
-    text: "Good morning! The sun is shining over Gan West preschool in Los Angeles. Morah Sarah, the school director, opens the big blue doors with a warm smile. Inside, the classroom is bright and cheerful — Morah Elizabeth, Morah Virginia, and Morah Joselyn are busy setting up for a wonderful day!",
+    text: "Good morning! The sun is shining over Gan West preschool in Los Angeles. Morah Sarah, the school director, opens the big blue doors with a warm smile. Inside, the classroom is bright and cheerful — the teachers are busy setting up for a wonderful day!",
     characters: ["sarah", "elizabeth", "virginia", "joselyn"],
     background: "classroom",
     next: "arrivals-1",
   },
   "arrivals-1": {
     id: "arrivals-1",
-    text: "The first kids arrive! Levi runs in with his favorite dinosaur backpack. Right behind him, Ariella skips through the door singing a little song. Micah gives Morah Elizabeth a big hug!",
+    text: "The first kids arrive! Levi runs in with his favorite dinosaur backpack. Right behind him, Ariella skips through the door singing a little song. Micah gives one of the teachers a big hug!",
     characters: ["levi", "ariella", "micah", "elizabeth"],
     background: "entrance",
     next: "arrivals-2",
@@ -46,28 +46,28 @@ export const scenes: Record<string, Scene> = {
   },
   "circle-time": {
     id: "circle-time",
-    text: "Everyone gathers on the colorful rug for circle time! Morah Virginia starts playing guitar and they all sing \"Shalom Chaverim\" together. Levi claps along, and Ariella dances in her spot. They sing the days of the week in Hebrew — Yom Rishon, Yom Sheni, Yom Shlishi!",
+    text: "Everyone gathers on the colorful rug for circle time! One of the teachers starts playing guitar and they all sing \"Shalom Chaverim\" together. Levi claps along, and Ariella dances in her spot. They sing the days of the week in Hebrew — Yom Rishon, Yom Sheni, Yom Shlishi!",
     characters: ["virginia", "levi", "ariella", "micah", "noa", "ezra", "talia", "jonah", "shira", "rafi"],
     background: "circle-rug",
     next: "snack-time",
   },
   "free-play": {
     id: "free-play",
-    text: "Time to play! Ezra and Jonah build a tall tower with blocks — it almost reaches the ceiling! Noa and Shira are playing in the toy kitchen, making pretend challah. Rafi is drawing a rainbow, and Talia reads a book with Morah Joselyn. So many fun things to do!",
+    text: "Time to play! Ezra and Jonah build a tall tower with blocks — it almost reaches the ceiling! Noa and Shira are playing in the toy kitchen, making pretend challah. Rafi is drawing a rainbow, and Talia reads a book with one of the teachers. So many fun things to do!",
     characters: ["ezra", "jonah", "noa", "shira", "rafi", "talia", "joselyn"],
     background: "playroom",
     next: "snack-time",
   },
   "snack-time": {
     id: "snack-time",
-    text: "Snack time! Everyone washes their hands and sits at the little tables. Morah Elizabeth passes out apple slices and crackers. Together they say the bracha: \"Baruch Atah Adonai... borei pri ha'etz!\" Yum yum yum!",
+    text: "Snack time! Everyone washes their hands and sits at the little tables. The teachers pass out apple slices and crackers. Together they say the bracha: \"Baruch Atah Adonai... borei pri ha'etz!\" Yum yum yum!",
     characters: ["elizabeth", "levi", "ariella", "micah", "noa", "ezra", "talia"],
     background: "snack-table",
     next: "mystery",
   },
   mystery: {
     id: "mystery",
-    text: "Oh no! After snack time, Morah Virginia notices something — Sparkle the class hamster is not in her cage! The little door is open! \"Where did Sparkle go?\" asks Morah Virginia. Can you help find her?",
+    text: "Oh no! After snack time, one of the teachers notices something — Sparkle the class hamster is not in her cage! The little door is open! \"Where did Sparkle go?\" she asks. Can you help find her?",
     characters: ["virginia"],
     background: "classroom",
     choices: [
@@ -99,14 +99,14 @@ export const scenes: Record<string, Scene> = {
   },
   "found-sparkle": {
     id: "found-sparkle",
-    text: "Hooray! Sparkle is found! Everyone cheers and claps. Morah Virginia gently picks up Sparkle and puts her back in her cozy cage. \"Good job, detectives!\" she says. Sparkle wiggles her little nose and everyone giggles.",
+    text: "Hooray! Sparkle is found! Everyone cheers and claps. The teacher gently picks up Sparkle and puts her back in her cozy cage. \"Good job, detectives!\" she says. Sparkle wiggles her little nose and everyone giggles.",
     characters: ["virginia", "levi", "ariella", "noa", "ezra"],
     background: "classroom",
     next: "art-choice",
   },
   "art-choice": {
     id: "art-choice",
-    text: "Now it's time for an art project! Morah Joselyn sets out the supplies on the big craft table. \"What should we make today?\" she asks with a big smile.",
+    text: "Now it's time for an art project! The teacher sets out the supplies on the big craft table. \"What should we make today?\" she asks with a big smile.",
     characters: ["joselyn"],
     background: "art-room",
     choices: [
@@ -116,14 +116,14 @@ export const scenes: Record<string, Scene> = {
   },
   "art-challah": {
     id: "art-challah",
-    text: "Time to make challah! But not the kind you eat — the kind you make with playdough! Everyone rolls and braids their dough, just like real challah. Micah makes a tiny one, and Talia makes a GIANT one. Morah Joselyn helps Rafi braid his, and they all paint their challahs golden brown. Beautiful!",
+    text: "Time to make challah! But not the kind you eat — the kind you make with playdough! Everyone rolls and braids their dough, just like real challah. Micah makes a tiny one, and Talia makes a GIANT one. The teacher helps Rafi braid his, and they all paint their challahs golden brown. Beautiful!",
     characters: ["joselyn", "micah", "talia", "rafi"],
     background: "art-room",
     next: "outdoor-play",
   },
   "art-mezuzah": {
     id: "art-mezuzah",
-    text: "Everyone gets a little wooden mezuzah to decorate! They use glitter, stickers, and paint to make them sparkly and special. Ariella covers hers in purple glitter, Jonah paints stars on his, and Noa adds tiny heart stickers. \"These are for your front doors at home!\" says Morah Joselyn.",
+    text: "Everyone gets a little wooden mezuzah to decorate! They use glitter, stickers, and paint to make them sparkly and special. Ariella covers hers in purple glitter, Jonah paints stars on his, and Noa adds tiny heart stickers. \"These are for your front doors at home!\" says the teacher.",
     characters: ["joselyn", "ariella", "jonah", "noa"],
     background: "art-room",
     next: "outdoor-play",
@@ -137,7 +137,7 @@ export const scenes: Record<string, Scene> = {
   },
   "shabbat-prep": {
     id: "shabbat-prep",
-    text: "It's Friday — that means Shabbat! Everyone helps set the special Shabbat table. Talia places the candlesticks, Rafi puts out the challah cover, and Shira pours the grape juice into little cups. Morah Elizabeth lights the candles, and everyone covers their eyes. \"Baruch Atah Adonai... l'hadlik ner shel Shabbat!\" Shabbat Shalom!",
+    text: "It's Friday — that means Shabbat! Everyone helps set the special Shabbat table. Talia places the candlesticks, Rafi puts out the challah cover, and Shira pours the grape juice into little cups. The teacher lights the candles, and everyone covers their eyes. \"Baruch Atah Adonai... l'hadlik ner shel Shabbat!\" Shabbat Shalom!",
     characters: ["elizabeth", "talia", "rafi", "shira"],
     background: "shabbat-table",
     next: "closing",

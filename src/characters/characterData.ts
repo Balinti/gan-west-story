@@ -27,7 +27,7 @@ export const characters: Record<string, CharacterConfig> = {
   },
   elizabeth: {
     name: "elizabeth",
-    displayName: "Morah Elizabeth",
+    displayName: "Teacher",
     role: "teacher",
     hairColor: "#2C1810",
     hairStyle: "curly",
@@ -37,7 +37,7 @@ export const characters: Record<string, CharacterConfig> = {
   },
   virginia: {
     name: "virginia",
-    displayName: "Morah Virginia",
+    displayName: "Teacher",
     role: "teacher",
     hairColor: "#1A1A2E",
     hairStyle: "ponytail",
@@ -47,7 +47,7 @@ export const characters: Record<string, CharacterConfig> = {
   },
   joselyn: {
     name: "joselyn",
-    displayName: "Morah Joselyn",
+    displayName: "Teacher",
     role: "teacher",
     hairColor: "#3D2B1F",
     hairStyle: "bob",
