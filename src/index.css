@@ -35,26 +35,24 @@ body {
 .app-container {
   width: 100%;
   height: 100vh;
+  height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
+  padding: 0;
+  background: #000;
 }
 
 /* ===== Story Screen ===== */
 .story-screen {
   width: 100%;
-  max-width: 900px;
+  max-width: 500px;
   height: 100%;
-  max-height: 700px;
-  background: #FFF;
-  border-radius: var(--radius);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: #000;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   position: relative;
-  border: 3px solid #F0E0C8;
 }
 
 .story-screen.fade-in {
@@ -84,13 +82,13 @@ body {
   overflow: hidden;
 }
 
-/* ===== Background ===== */
-.background-layer {
+/* ===== Scene Image ===== */
+.scene-image-layer {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 55%;
+  height: 100%;
   z-index: 1;
 }
 
@@ -99,74 +97,37 @@ body {
   height: 100%;
 }
 
-.scene-background svg {
+.scene-bg-image {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: top center;
   display: block;
 }
 
-/* ===== Characters ===== */
-.characters-layer {
-  position: relative;
-  z-index: 2;
-  height: 45%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 0;
-}
-
-.character-group {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 4px;
-  flex-wrap: wrap;
-  padding: 0 12px;
-}
-
-.character-slot {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-}
-
-.character-name {
-  font-size: 0.6rem;
-  font-weight: 700;
-  color: var(--color-text);
-  text-align: center;
-  white-space: nowrap;
-}
-
-.character-enter {
-  animation: bounceIn 0.5s ease-out both;
-}
-
-@keyframes bounceIn {
-  0% { opacity: 0; transform: translateY(30px) scale(0.8); }
-  60% { transform: translateY(-5px) scale(1.05); }
-  100% { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-.character-overflow {
-  font-size: 0.75rem;
-  color: #999;
-  align-self: flex-end;
-  padding-bottom: 10px;
+.scene-bg-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #FFF8E7, #FFECD2);
 }
 
 /* ===== Text Layer ===== */
 .text-layer {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 3;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.92), #FFF);
-  padding: 16px 24px 20px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.55) 15%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  padding: 40px 20px 24px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  min-height: 160px;
 }
 
 /* ===== Narration ===== */
@@ -177,16 +138,17 @@ body {
 
 .narration-text {
   font-size: 1.05rem;
-  line-height: 1.7;
-  color: var(--color-text);
+  line-height: 1.65;
+  color: #FFF;
   font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .skip-hint {
   display: block;
   text-align: center;
   font-size: 0.7rem;
-  color: #BBB;
+  color: rgba(255, 255, 255, 0.5);
   margin-top: 4px;
   animation: pulse 1.5s ease-in-out infinite;
 }
@@ -211,23 +173,22 @@ body {
   font-weight: 700;
   font-family: var(--font-story);
   color: #FFF;
-  background: linear-gradient(135deg, var(--color-primary), #357ABD);
-  border: none;
+  background: rgba(74, 144, 217, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 12px;
   cursor: pointer;
   transition: transform 0.15s, box-shadow 0.15s;
-  box-shadow: 0 3px 8px rgba(74, 144, 217, 0.3);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
   animation: slideUp 0.4s ease-out both;
+  backdrop-filter: blur(8px);
 }
 
 .choice-button:nth-child(2) {
-  background: linear-gradient(135deg, var(--color-green), #1E8449);
-  box-shadow: 0 3px 8px rgba(39, 174, 96, 0.3);
+  background: rgba(39, 174, 96, 0.7);
 }
 
 .choice-button:nth-child(3) {
-  background: linear-gradient(135deg, var(--color-purple), #7D3C98);
-  box-shadow: 0 3px 8px rgba(155, 89, 182, 0.3);
+  background: rgba(155, 89, 182, 0.7);
 }
 
 .choice-button:hover {
@@ -251,18 +212,19 @@ body {
   font-size: 1rem;
   font-weight: 700;
   font-family: var(--font-story);
-  color: var(--color-primary);
-  background: transparent;
-  border: 2px solid var(--color-primary);
+  color: #FFF;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 24px;
   cursor: pointer;
   transition: all 0.2s;
   animation: fadeIn 0.4s ease-out;
+  backdrop-filter: blur(4px);
 }
 
 .continue-button:hover {
-  background: var(--color-primary);
-  color: #FFF;
+  background: rgba(255, 255, 255, 0.3);
+  border-color: #FFF;
 }
 
 /* ===== Restart Button ===== */
@@ -288,22 +250,26 @@ body {
 
 /* ===== Progress Bar ===== */
 .progress-bar-container {
-  padding: 8px 16px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 16px 0;
   z-index: 10;
 }
 
 .progress-bar-track {
   width: 100%;
-  height: 6px;
-  background: #F0E0C8;
-  border-radius: 3px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
   overflow: hidden;
 }
 
 .progress-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-gold));
-  border-radius: 3px;
+  background: linear-gradient(90deg, #FFF, var(--color-gold));
+  border-radius: 2px;
   transition: width 0.5s ease-out;
 }
 
@@ -318,18 +284,7 @@ body {
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 768px) {
-  .app-container {
-    padding: 0;
-  }
-
-  .story-screen {
-    max-height: 100%;
-    height: 100%;
-    border-radius: 0;
-    border: none;
-  }
-
+@media (max-width: 500px) {
   .narration-text {
     font-size: 0.95rem;
   }
@@ -339,27 +294,20 @@ body {
     padding: 12px 16px;
   }
 
-  .character-group {
-    gap: 2px;
-  }
-
-  .character-slot svg {
-    width: 55px;
-    height: 55px;
-  }
-
-  .character-name {
-    font-size: 0.5rem;
-  }
-
   .text-layer {
-    min-height: 140px;
-    padding: 12px 16px 16px;
+    padding: 36px 16px 20px;
   }
 }
 
-@media (min-height: 900px) {
+/* Desktop: constrain to phone-like viewport */
+@media (min-width: 501px) {
+  .app-container {
+    background: #111;
+  }
+
   .story-screen {
-    max-height: 800px;
+    border-radius: 20px;
+    max-height: 900px;
+    overflow: hidden;
   }
 }

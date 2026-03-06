@@ -1,26 +1,43 @@
-import { backgroundComponents } from "../backgrounds/backgrounds";
-
-type Props = {
-  backgroundKey: string;
+const sceneImages: Record<string, string> = {
+  opening: "/scenes/opening.png",
+  "arrivals-1": "/scenes/arrivals-1.png",
+  "arrivals-2": "/scenes/arrivals-2.png",
+  "first-choice": "/scenes/first-choice.png",
+  "circle-time": "/scenes/circle-time.png",
+  "free-play": "/scenes/free-play.png",
+  "snack-time": "/scenes/snack-time.png",
+  mystery: "/scenes/mystery.png",
+  "search-playground": "/scenes/search-playground.png",
+  "search-art": "/scenes/search-art.png",
+  "search-sarah": "/scenes/search-sarah.png",
+  "found-sparkle": "/scenes/found-sparkle.png",
+  "art-choice": "/scenes/art-choice.png",
+  "art-challah": "/scenes/art-challah.png",
+  "art-mezuzah": "/scenes/art-mezuzah.png",
+  "outdoor-play": "/scenes/outdoor-play.png",
+  "shabbat-prep": "/scenes/shabbat-prep.png",
+  closing: "/scenes/closing.png",
+  end: "/scenes/end.png",
 };
 
-export default function SceneBackground({ backgroundKey }: Props) {
-  const BgComponent = backgroundComponents[backgroundKey];
+type Props = {
+  sceneId: string;
+};
 
-  if (!BgComponent) {
+export default function SceneBackground({ sceneId }: Props) {
+  const src = sceneImages[sceneId];
+
+  if (!src) {
     return (
       <div className="scene-background fallback">
-        <svg viewBox="0 0 800 400" className="scene-bg">
-          <rect width={800} height={400} fill="#FFF8E7" />
-          <rect y={280} width={800} height={120} fill="#DEB887" />
-        </svg>
+        <div className="scene-bg-placeholder" />
       </div>
     );
   }
 
   return (
     <div className="scene-background">
-      <BgComponent />
+      <img src={src} alt="" className="scene-bg-image" />
     </div>
   );
 }

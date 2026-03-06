@@ -1,7 +1,6 @@
 import { useState, useCallback } from "react";
 import type { Scene, Choice } from "../data/story";
 import SceneBackground from "./SceneBackground";
-import CharacterGroup from "./CharacterGroup";
 import NarrationText from "./NarrationText";
 import ChoiceButtons from "./ChoiceButtons";
 import ProgressBar from "./ProgressBar";
@@ -58,12 +57,8 @@ export default function StoryScreen({
       <ProgressBar current={progress} total={totalScenes} />
 
       <div className="scene-content">
-        <div className="background-layer">
-          <SceneBackground backgroundKey={scene.background} />
-        </div>
-
-        <div className="characters-layer">
-          <CharacterGroup characterIds={scene.characters} />
+        <div className="scene-image-layer">
+          <SceneBackground sceneId={scene.id} />
         </div>
 
         <div className="text-layer">
