@@ -1,9 +1,10 @@
-import { useState, useCallback } from "react";
+import { useState, useEffect } from "react";
 import type { Scene, Choice } from "../data/story";
 import SceneBackground from "./SceneBackground";
 import NarrationText from "./NarrationText";
 import ChoiceButtons from "./ChoiceButtons";
 import ProgressBar from "./ProgressBar";
+import { useSceneAudio } from "../hooks/useSceneAudio";
 
 type Props = {
   scene: Scene;
@@ -22,15 +23,18 @@ export default function StoryScreen({
   isEnd,
   onRestart,
 }: Props) {
-  const [textComplete, setTextComplete] = useState(false);
   const [transitioning, setTransitioning] = useState(false);
+  const { sentences, currentSentenceIndex, allDone, skipAll } = useSceneAudio(
+    scene.id
+  );
 
-  const handleTextComplete = useCallback(() => {
-    setTextComplete(true);
-  }, []);
+  // Reset transition state when scene changes
+  useEffect(() => {
+    setTransitioning(false);
+  }, [scene.id]);
 
   const handleAdvance = () => {
-    if (!textComplete) return;
+    if (!allDone) return;
     if (scene.next) {
       goToScene(scene.next);
     }
@@ -42,15 +46,14 @@ export default function StoryScreen({
 
   const goToScene = (nextId: string) => {
     setTransitioning(true);
+    skipAll(); // Stop audio when transitioning
     setTimeout(() => {
-      setTextComplete(false);
-      setTransitioning(false);
       onNext(nextId);
     }, 400);
   };
 
   const hasChoices = scene.choices && scene.choices.length > 0;
-  const showContinue = textComplete && !hasChoices && !isEnd && scene.next;
+  const showContinue = allDone && !hasChoices && !isEnd && scene.next;
 
   return (
     <div className={`story-screen ${transitioning ? "fade-out" : "fade-in"}`}>
@@ -63,16 +66,18 @@ export default function StoryScreen({
 
         <div className="text-layer">
           <NarrationText
-            text={scene.text}
-            onComplete={handleTextComplete}
+            sentences={sentences}
+            currentSentenceIndex={currentSentenceIndex}
+            allDone={allDone}
+            onSkip={skipAll}
             key={scene.id}
           />
 
-          {hasChoices && (
+          {hasChoices && allDone && (
             <ChoiceButtons
               choices={scene.choices!}
               onChoose={handleChoice}
-              visible={textComplete}
+              visible={allDone}
             />
           )}
 
@@ -82,7 +87,7 @@ export default function StoryScreen({
             </button>
           )}
 
-          {isEnd && textComplete && (
+          {isEnd && allDone && (
             <button className="restart-button" onClick={onRestart}>
               Read Again!
             </button>

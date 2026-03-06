@@ -1,0 +1,465 @@
+{
+  "opening": [
+    {
+      "sentence": 1,
+      "text": "Good morning!",
+      "file": "opening_01.mp3"
+    },
+    {
+      "sentence": 2,
+      "text": "The sun is shining over Gan West preschool in Los Angeles.",
+      "file": "opening_02.mp3"
+    },
+    {
+      "sentence": 3,
+      "text": "Morah Sarah, the school director, opens the big blue doors with a warm smile.",
+      "file": "opening_03.mp3"
+    },
+    {
+      "sentence": 4,
+      "text": "Inside, the classroom is bright and cheerful \u2014 Teacher Elizabeth, Teacher Virginia, and Teacher Joselyn are busy setting up for a wonderful day!",
+      "file": "opening_04.mp3"
+    }
+  ],
+  "arrivals-1": [
+    {
+      "sentence": 1,
+      "text": "The first kids arrive!",
+      "file": "arrivals-1_01.mp3"
+    },
+    {
+      "sentence": 2,
+      "text": "Crew runs in with his favorite dinosaur backpack.",
+      "file": "arrivals-1_02.mp3"
+    },
+    {
+      "sentence": 3,
+      "text": "Right behind him, Mia Alma skips through the door singing a little song.",
+      "file": "arrivals-1_03.mp3"
+    },
+    {
+      "sentence": 4,
+      "text": "Mason gives Teacher Elizabeth a big hug!",
+      "file": "arrivals-1_04.mp3"
+    },
+    {
+      "sentence": 5,
+      "text": "Ayla walks in holding her teddy bear.",
+      "file": "arrivals-1_05.mp3"
+    }
+  ],
+  "arrivals-2": [
+    {
+      "sentence": 1,
+      "text": "More friends are here!",
+      "file": "arrivals-2_01.mp3"
+    },
+    {
+      "sentence": 2,
+      "text": "Shay zooms past like an airplane \u2014 whoooosh!",
+      "file": "arrivals-2_02.mp3"
+    },
+    {
+      "sentence": 3,
+      "text": "Chaya waves goodbye to her mommy and runs to the toy kitchen.",
+      "file": "arrivals-2_03.mp3"
+    },
+    {
+      "sentence": 4,
+      "text": "Desi and Mia Alexandra arrive together, ready to play!",
+      "file": "arrivals-2_04.mp3"
+    }
+  ],
+  "first-choice": [
+    {
+      "sentence": 1,
+      "text": "Everyone is here!",
+      "file": "first-choice_01.mp3"
+    },
+    {
+      "sentence": 2,
+      "text": "Morah Sarah claps her hands and says, \"Boker tov, yeladim! Good morning, children! What should we do first?\"",
+      "file": "first-choice_02.mp3"
+    }
+  ],
+  "circle-time": [
+    {
+      "sentence": 1,
+      "text": "Everyone gathers on the colorful rug for circle time!",
+      "file": "circle-time_01.mp3"
+    },
+    {
+      "sentence": 2,
+      "text": "Teacher Virginia starts playing guitar and they all sing \"Shalom Chaverim\" together.",
+      "file": "circle-time_02.mp3"
+    },
+    {
+      "sentence": 3,
+      "text": "Crew claps along, and Mia Alma dances in her spot.",
+      "file": "circle-time_03.mp3"
+    },
+    {
+      "sentence": 4,
+      "text": "They sing the days of the week in Hebrew \u2014 Yom Rishon, Yom Sheni, Yom Shlishi!",
+      "file": "circle-time_04.mp3"
+    }
+  ],
+  "free-play": [
+    {
+      "sentence": 1,
+      "text": "Time to play!",
+      "file": "free-play_01.mp3"
+    },
+    {
+      "sentence": 2,
+      "text": "Shay and Desi build a tall tower with blocks \u2014 it almost reaches the ceiling!",
+      "file": "free-play_02.mp3"
+    },
+    {
+      "sentence": 3,
+      "text": "Ayla and Mia Alexandra are playing in the toy kitchen, making pretend challah.",
+      "file": "free-play_03.mp3"
+    },
+    {
+      "sentence": 4,
+      "text": "Chaya is drawing a rainbow, and Mason reads a book with Teacher Joselyn.",
+      "file": "free-play_04.mp3"
+    },
+    {
+      "sentence": 5,
+      "text": "So many fun things to do!",
+      "file": "free-play_05.mp3"
+    }
+  ],
+  "snack-time": [
+    {
+      "sentence": 1,
+      "text": "Snack time!",
+      "file": "snack-time_01.mp3"
+    },
+    {
+      "sentence": 2,
+      "text": "Everyone washes their hands and sits at the little tables.",
+      "file": "snack-time_02.mp3"
+    },
+    {
+      "sentence": 3,
+      "text": "Teacher Elizabeth passes out apple slices and crackers.",
+      "file": "snack-time_03.mp3"
+    },
+    {
+      "sentence": 4,
+      "text": "Together they say the bracha: \"Baruch Atah Hashem... Borei pri ha'etz!\"",
+      "file": "snack-time_04.mp3"
+    },
+    {
+      "sentence": 5,
+      "text": "Yum yum yum!",
+      "file": "snack-time_05.mp3"
+    }
+  ],
+  "mystery": [
+    {
+      "sentence": 1,
+      "text": "Oh no!",
+      "file": "mystery_01.mp3"
+    },
+    {
+      "sentence": 2,
+      "text": "After snack time, Teacher Virginia notices something \u2014 Sparkle the class hamster is not in her cage!",
+      "file": "mystery_02.mp3"
+    },
+    {
+      "sentence": 3,
+      "text": "The little door is open!",
+      "file": "mystery_03.mp3"
+    },
+    {
+      "sentence": 4,
+      "text": "\"Where did Sparkle go?\" asks Teacher Virginia.",
+      "file": "mystery_04.mp3"
+    },
+    {
+      "sentence": 5,
+      "text": "Can you help find her?",
+      "file": "mystery_05.mp3"
+    }
+  ],
+  "search-playground": [
+    {
+      "sentence": 1,
+      "text": "Everyone runs outside to the playground!",
+      "file": "search-playground_01.mp3"
+    },
+    {
+      "sentence": 2,
+      "text": "Crew looks under the slide, Mason checks behind the sandbox, and Mia Alma peeks inside the little playhouse.",
+      "file": "search-playground_02.mp3"
+    },
+    {
+      "sentence": 3,
+      "text": "\"I see something fuzzy!\" shouts Shay, pointing at the garden.",
+      "file": "search-playground_03.mp3"
+    },
+    {
+      "sentence": 4,
+      "text": "There's Sparkle, nibbling on a leaf!",
+      "file": "search-playground_04.mp3"
+    }
+  ],
+  "search-art": [
+    {
+      "sentence": 1,
+      "text": "The kids tiptoe into the art room.",
+      "file": "search-art_01.mp3"
+    },
+    {
+      "sentence": 2,
+      "text": "Mia Alexandra checks under the easels, Desi looks behind the paint jars, and Chaya peeks in the crayon box.",
+      "file": "search-art_02.mp3"
+    },
+    {
+      "sentence": 3,
+      "text": "\"Look!\" whispers Ayla, pointing at the paper shelf.",
+      "file": "search-art_03.mp3"
+    },
+    {
+      "sentence": 4,
+      "text": "Sparkle is sitting there, cuddled up in a pile of tissue paper!",
+      "file": "search-art_04.mp3"
+    }
+  ],
+  "search-sarah": [
+    {
+      "sentence": 1,
+      "text": "The kids go to Morah Sarah's office.",
+      "file": "search-sarah_01.mp3"
+    },
+    {
+      "sentence": 2,
+      "text": "\"Morah Sarah, Sparkle is missing!\" says Desi.",
+      "file": "search-sarah_02.mp3"
+    },
+    {
+      "sentence": 3,
+      "text": "Morah Sarah smiles and says, \"I think I saw her near the book corner!\"",
+      "file": "search-sarah_03.mp3"
+    },
+    {
+      "sentence": 4,
+      "text": "They all rush over, and sure enough \u2014 Sparkle is snuggled up inside a big storybook!",
+      "file": "search-sarah_04.mp3"
+    },
+    {
+      "sentence": 5,
+      "text": "She wanted to read a story too!",
+      "file": "search-sarah_05.mp3"
+    }
+  ],
+  "found-sparkle": [
+    {
+      "sentence": 1,
+      "text": "Hooray! Sparkle is found!",
+      "file": "found-sparkle_01.mp3"
+    },
+    {
+      "sentence": 2,
+      "text": "Everyone cheers and claps.",
+      "file": "found-sparkle_02.mp3"
+    },
+    {
+      "sentence": 3,
+      "text": "Teacher Virginia gently picks up Sparkle and puts her back in her cozy cage.",
+      "file": "found-sparkle_03.mp3"
+    },
+    {
+      "sentence": 4,
+      "text": "\"Good job, detectives!\" she says.",
+      "file": "found-sparkle_04.mp3"
+    },
+    {
+      "sentence": 5,
+      "text": "Sparkle wiggles her little nose and everyone giggles.",
+      "file": "found-sparkle_05.mp3"
+    }
+  ],
+  "art-choice": [
+    {
+      "sentence": 1,
+      "text": "Now it's time for an art project!",
+      "file": "art-choice_01.mp3"
+    },
+    {
+      "sentence": 2,
+      "text": "Teacher Joselyn sets out the supplies on the big craft table.",
+      "file": "art-choice_02.mp3"
+    },
+    {
+      "sentence": 3,
+      "text": "\"What should we make today?\" she asks with a big smile.",
+      "file": "art-choice_03.mp3"
+    }
+  ],
+  "art-challah": [
+    {
+      "sentence": 1,
+      "text": "Time to make challah!",
+      "file": "art-challah_01.mp3"
+    },
+    {
+      "sentence": 2,
+      "text": "But not the kind you eat \u2014 the kind you make with playdough!",
+      "file": "art-challah_02.mp3"
+    },
+    {
+      "sentence": 3,
+      "text": "Everyone rolls and braids their dough, just like real challah.",
+      "file": "art-challah_03.mp3"
+    },
+    {
+      "sentence": 4,
+      "text": "Mason makes a tiny one, and Chaya makes a GIANT one.",
+      "file": "art-challah_04.mp3"
+    },
+    {
+      "sentence": 5,
+      "text": "Teacher Joselyn helps Desi braid his, and they all paint their challahs golden brown.",
+      "file": "art-challah_05.mp3"
+    },
+    {
+      "sentence": 6,
+      "text": "Beautiful!",
+      "file": "art-challah_06.mp3"
+    }
+  ],
+  "art-mezuzah": [
+    {
+      "sentence": 1,
+      "text": "Everyone gets a little wooden mezuzah to decorate!",
+      "file": "art-mezuzah_01.mp3"
+    },
+    {
+      "sentence": 2,
+      "text": "They use glitter, stickers, and paint to make them sparkly and special.",
+      "file": "art-mezuzah_02.mp3"
+    },
+    {
+      "sentence": 3,
+      "text": "Mia Alma covers hers in purple glitter, Desi paints stars on his, and Ayla adds tiny heart stickers.",
+      "file": "art-mezuzah_03.mp3"
+    },
+    {
+      "sentence": 4,
+      "text": "\"These are for your front doors at home!\" says Teacher Joselyn.",
+      "file": "art-mezuzah_04.mp3"
+    }
+  ],
+  "outdoor-play": [
+    {
+      "sentence": 1,
+      "text": "Playground time!",
+      "file": "outdoor-play_01.mp3"
+    },
+    {
+      "sentence": 2,
+      "text": "Everyone runs outside into the sunshine.",
+      "file": "outdoor-play_02.mp3"
+    },
+    {
+      "sentence": 3,
+      "text": "Shay goes down the big slide \u2014 wheee!",
+      "file": "outdoor-play_03.mp3"
+    },
+    {
+      "sentence": 4,
+      "text": "Crew and Desi play on the swings, Mia Alexandra and Ayla dig in the sandbox, and Mia Alma plays tag with Mason.",
+      "file": "outdoor-play_04.mp3"
+    },
+    {
+      "sentence": 5,
+      "text": "The teachers watch and clap and laugh.",
+      "file": "outdoor-play_05.mp3"
+    },
+    {
+      "sentence": 6,
+      "text": "What a perfect day!",
+      "file": "outdoor-play_06.mp3"
+    }
+  ],
+  "shabbat-prep": [
+    {
+      "sentence": 1,
+      "text": "It's Friday \u2014 that means Shabbat!",
+      "file": "shabbat-prep_01.mp3"
+    },
+    {
+      "sentence": 2,
+      "text": "Everyone helps set the special Shabbat table.",
+      "file": "shabbat-prep_02.mp3"
+    },
+    {
+      "sentence": 3,
+      "text": "Chaya places the candlesticks, Desi puts out the challah cover, and Mia Alexandra pours the grape juice into little cups.",
+      "file": "shabbat-prep_03.mp3"
+    },
+    {
+      "sentence": 4,
+      "text": "Teacher Elizabeth lights the candles, and everyone covers their eyes.",
+      "file": "shabbat-prep_04.mp3"
+    },
+    {
+      "sentence": 5,
+      "text": "\"Baruch Atah Hashem... l'hadlik ner shel Shabbat!\"",
+      "file": "shabbat-prep_05.mp3"
+    },
+    {
+      "sentence": 6,
+      "text": "Shabbat Shalom!",
+      "file": "shabbat-prep_06.mp3"
+    }
+  ],
+  "closing": [
+    {
+      "sentence": 1,
+      "text": "What a wonderful day at Gan West!",
+      "file": "closing_01.mp3"
+    },
+    {
+      "sentence": 2,
+      "text": "Now it's time to go home.",
+      "file": "closing_02.mp3"
+    },
+    {
+      "sentence": 3,
+      "text": "The parents arrive one by one, and each kid gets a big hug from the teachers.",
+      "file": "closing_03.mp3"
+    },
+    {
+      "sentence": 4,
+      "text": "\"See you next week!\" everyone says.",
+      "file": "closing_04.mp3"
+    },
+    {
+      "sentence": 5,
+      "text": "Crew waves, Mia Alma blows a kiss, and little Ayla gives one last hug to Morah Sarah.",
+      "file": "closing_05.mp3"
+    }
+  ],
+  "end": [
+    {
+      "sentence": 1,
+      "text": "Shabbat Shalom from Gan West!",
+      "file": "end_01.mp3"
+    },
+    {
+      "sentence": 2,
+      "text": "Thank you for spending the day with us.",
+      "file": "end_02.mp3"
+    },
+    {
+      "sentence": 3,
+      "text": "We can't wait to see you again!",
+      "file": "end_03.mp3"
+    }
+  ]
+}

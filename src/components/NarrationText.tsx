@@ -1,55 +1,32 @@
-import { useState, useEffect, useRef } from "react";
-
-type Props = {
+type SentenceInfo = {
+  sentence: number;
   text: string;
-  onComplete: () => void;
-  speed?: number;
+  file: string;
 };
 
-export default function NarrationText({ text, onComplete, speed = 35 }: Props) {
-  const [displayedText, setDisplayedText] = useState("");
-  const [isComplete, setIsComplete] = useState(false);
-  const indexRef = useRef(0);
-  const intervalRef = useRef<number | null>(null);
+type Props = {
+  sentences: SentenceInfo[];
+  currentSentenceIndex: number;
+  allDone: boolean;
+  onSkip: () => void;
+};
 
-  useEffect(() => {
-    // Reset when text changes
-    setDisplayedText("");
-    setIsComplete(false);
-    indexRef.current = 0;
-
-    intervalRef.current = window.setInterval(() => {
-      indexRef.current++;
-      if (indexRef.current >= text.length) {
-        setDisplayedText(text);
-        setIsComplete(true);
-        if (intervalRef.current) clearInterval(intervalRef.current);
-        onComplete();
-      } else {
-        setDisplayedText(text.slice(0, indexRef.current));
-      }
-    }, speed);
-
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-    };
-  }, [text, speed, onComplete]);
-
-  const handleSkip = () => {
-    if (!isComplete) {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-      setDisplayedText(text);
-      setIsComplete(true);
-      onComplete();
-    }
-  };
+export default function NarrationText({
+  sentences,
+  currentSentenceIndex,
+  allDone,
+  onSkip,
+}: Props) {
+  // Show all sentences up to and including current
+  const visibleText = sentences
+    .slice(0, currentSentenceIndex + 1)
+    .map((s) => s.text)
+    .join(" ");
 
   return (
-    <div className="narration-container" onClick={handleSkip}>
-      <p className="narration-text">{displayedText}</p>
-      {!isComplete && (
-        <span className="skip-hint">Tap to skip</span>
-      )}
+    <div className="narration-container" onClick={onSkip}>
+      <p className="narration-text">{visibleText}</p>
+      {!allDone && <span className="skip-hint">Tap to skip</span>}
     </div>
   );
 }
