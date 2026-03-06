@@ -60,7 +60,7 @@ export const scenes: Record<string, Scene> = {
   },
   "snack-time": {
     id: "snack-time",
-    text: "Snack time! Everyone washes their hands and sits at the little tables. Teacher Elizabeth passes out apple slices and crackers. Together they say the bracha: \"Baruch Atah Adonai... borei pri ha'etz!\" Yum yum yum!",
+    text: "Snack time! Everyone washes their hands and sits at the little tables. Teacher Elizabeth passes out apple slices and crackers. Together they say the bracha: \"Baruch Atah Hashem... Borei pri ha'etz!\" Yum yum yum!",
     characters: ["elizabeth", "crew", "mia-alma", "mason", "ayla", "shay", "chaya"],
     background: "snack-table",
     next: "mystery",
@@ -137,7 +137,7 @@ export const scenes: Record<string, Scene> = {
   },
   "shabbat-prep": {
     id: "shabbat-prep",
-    text: "It's Friday — that means Shabbat! Everyone helps set the special Shabbat table. Chaya places the candlesticks, Desi puts out the challah cover, and Mia Alexandra pours the grape juice into little cups. Teacher Elizabeth lights the candles, and everyone covers their eyes. \"Baruch Atah Adonai... l'hadlik ner shel Shabbat!\" Shabbat Shalom!",
+    text: "It's Friday — that means Shabbat! Everyone helps set the special Shabbat table. Chaya places the candlesticks, Desi puts out the challah cover, and Mia Alexandra pours the grape juice into little cups. Teacher Elizabeth lights the candles, and everyone covers their eyes. \"Baruch Atah Hashem... l'hadlik ner shel Shabbat!\" Shabbat Shalom!",
     characters: ["elizabeth", "chaya", "desi", "mia-alexandra"],
     background: "shabbat-table",
     next: "closing",
