@@ -2,7 +2,10 @@ import { useState, useMemo } from "react";
 import { scenes, mainPathScenes } from "./data/story";
 import StoryScreen from "./components/StoryScreen";
 
+const base = import.meta.env.BASE_URL;
+
 function App() {
+  const [started, setStarted] = useState(false);
   const [currentSceneId, setCurrentSceneId] = useState("opening");
   const [history, setHistory] = useState<string[]>(["opening"]);
 
@@ -25,7 +28,32 @@ function App() {
   const handleRestart = () => {
     setCurrentSceneId("opening");
     setHistory(["opening"]);
+    setStarted(false);
   };
+
+  if (!started) {
+    return (
+      <div className="app-container">
+        <div className="story-screen start-screen">
+          <img
+            src={`${base}scenes/opening.png`}
+            alt=""
+            className="start-bg"
+          />
+          <div className="start-overlay">
+            <h1 className="start-title">A Day at Gan West</h1>
+            <p className="start-subtitle">An Interactive Story</p>
+            <button
+              className="start-button"
+              onClick={() => setStarted(true)}
+            >
+              Start Story
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (!currentScene) {
     return <div className="error">Scene not found: {currentSceneId}</div>;
