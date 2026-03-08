@@ -15,7 +15,7 @@ export type Scene = {
 export const scenes: Record<string, Scene> = {
   opening: {
     id: "opening",
-    text: "Good morning! The sun is shining over Gan West preschool in Los Angeles. Morah Sarah, the school director, opens the big blue doors with a warm smile. Inside, the classroom is bright and cheerful — Teacher Elizabeth, Teacher Virginia, and Teacher Joselyn are busy setting up for a wonderful day!",
+    text: "Good morning! The sun is shining over Gan West preschool in Los Angeles. Morah Sara, the school director, opens the big blue doors with a warm smile. Inside, the classroom is bright and cheerful — Teacher Elizabeth, Teacher Virginia, and Teacher Jocelyn are busy setting up for a wonderful day!",
     characters: ["sarah", "elizabeth", "virginia", "joselyn"],
     background: "classroom",
     next: "arrivals-1",
@@ -36,7 +36,7 @@ export const scenes: Record<string, Scene> = {
   },
   "first-choice": {
     id: "first-choice",
-    text: "Everyone is here! Morah Sarah claps her hands and says, \"Boker tov, yeladim! Good morning, children! What should we do first?\"",
+    text: "Everyone is here! Morah Sara claps her hands and says, \"Boker tov, yeladim! Good morning, children! What should we do first?\"",
     characters: ["sarah"],
     background: "classroom",
     choices: [
@@ -53,7 +53,7 @@ export const scenes: Record<string, Scene> = {
   },
   "free-play": {
     id: "free-play",
-    text: "Time to play! Shai and Desi build a tall tower with blocks — it almost reaches the ceiling! Aila and Mia Alexandra are playing in the toy kitchen, making pretend challah. Chaya is drawing a rainbow, and Mason reads a book with Teacher Joselyn. So many fun things to do!",
+    text: "Time to play! Shai and Desi build a tall tower with blocks — it almost reaches the ceiling! Aila and Mia Alexandra are playing in the toy kitchen, making pretend challah. Chaya is drawing a rainbow, and Mason reads a book with Teacher Jocelyn. So many fun things to do!",
     characters: ["shai", "desi", "aila", "mia-alexandra", "chaya", "mason", "joselyn"],
     background: "playroom",
     next: "snack-time",
@@ -73,7 +73,7 @@ export const scenes: Record<string, Scene> = {
     choices: [
       { label: "\ud83c\udf33 Check the playground!", nextScene: "search-playground" },
       { label: "\ud83c\udfa8 Check the art room!", nextScene: "search-art" },
-      { label: "\ud83d\udc69\u200d\ud83c\udfeb Ask Morah Sarah!", nextScene: "search-sarah" },
+      { label: "\ud83d\udc69\u200d\ud83c\udfeb Ask Morah Sara!", nextScene: "search-sarah" },
     ],
   },
   "search-playground": {
@@ -92,7 +92,7 @@ export const scenes: Record<string, Scene> = {
   },
   "search-sarah": {
     id: "search-sarah",
-    text: "The kids go to Morah Sarah's office. \"Morah Sarah, Sparkle is missing!\" says Desi. Morah Sarah smiles and says, \"I think I saw her near the book corner!\" They all rush over, and sure enough — Sparkle is snuggled up inside a big storybook! She wanted to read a story too!",
+    text: "The kids go to Morah Sara's office. \"Morah Sara, Sparkle is missing!\" says Desi. Morah Sara smiles and says, \"I think I saw her near the book corner!\" They all rush over, and sure enough — Sparkle is snuggled up inside a big storybook! She wanted to read a story too!",
     characters: ["sarah", "desi", "mia-alexandra"],
     background: "office",
     next: "found-sparkle",
@@ -106,7 +106,7 @@ export const scenes: Record<string, Scene> = {
   },
   "art-choice": {
     id: "art-choice",
-    text: "Now it's time for an art project! Teacher Joselyn sets out the supplies on the big craft table. \"What should we make today?\" she asks with a big smile.",
+    text: "Now it's time for an art project! Teacher Jocelyn sets out the supplies on the big craft table. \"What should we make today?\" she asks with a big smile.",
     characters: ["joselyn"],
     background: "art-room",
     choices: [
@@ -116,14 +116,14 @@ export const scenes: Record<string, Scene> = {
   },
   "art-challah": {
     id: "art-challah",
-    text: "Time to make challah! But not the kind you eat — the kind you make with playdough! Everyone rolls and braids their dough, just like real challah. Mason makes a tiny one, and Chaya makes a GIANT one. Teacher Joselyn helps Desi braid his, and they all paint their challahs golden brown. Beautiful!",
+    text: "Time to make challah! But not the kind you eat — the kind you make with playdough! Everyone rolls and braids their dough, just like real challah. Mason makes a tiny one, and Chaya makes a GIANT one. Teacher Jocelyn helps Desi braid his, and they all paint their challahs golden brown. Beautiful!",
     characters: ["joselyn", "mason", "chaya", "desi"],
     background: "art-room",
     next: "outdoor-play",
   },
   "art-mezuzah": {
     id: "art-mezuzah",
-    text: "Everyone gets a little wooden mezuzah to decorate! They use glitter, stickers, and paint to make them sparkly and special. Mia Alma covers hers in purple glitter, Desi paints stars on his, and Aila adds tiny heart stickers. \"These are for your front doors at home!\" says Teacher Joselyn.",
+    text: "Everyone gets a little wooden mezuzah to decorate! They use glitter, stickers, and paint to make them sparkly and special. Mia Alma covers hers in purple glitter, Desi paints stars on his, and Aila adds tiny heart stickers. \"These are for your front doors at home!\" says Teacher Jocelyn.",
     characters: ["joselyn", "mia-alma", "desi", "aila"],
     background: "art-room",
     next: "outdoor-play",
@@ -144,7 +144,7 @@ export const scenes: Record<string, Scene> = {
   },
   closing: {
     id: "closing",
-    text: "What a wonderful day at Gan West! Now it's time to go home. The parents arrive one by one, and each kid gets a big hug from the teachers. \"See you next week!\" everyone says. Cru waves, Mia Alma blows a kiss, and little Aila gives one last hug to Morah Sarah.",
+    text: "What a wonderful day at Gan West! Now it's time to go home. The parents arrive one by one, and each kid gets a big hug from the teachers. \"See you next week!\" everyone says. Cru waves, Mia Alma blows a kiss, and little Aila gives one last hug to Morah Sara.",
     characters: ["sarah", "elizabeth", "virginia", "joselyn", "cru", "mia-alma", "aila"],
     background: "entrance",
     next: "end",
