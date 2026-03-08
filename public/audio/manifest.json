@@ -12,12 +12,12 @@
     },
     {
       "sentence": 3,
-      "text": "Morah Sarah, the school director, opens the big blue doors with a warm smile.",
+      "text": "Morah Sara, the school director, opens the big blue doors with a warm smile.",
       "file": "opening_03.mp3"
     },
     {
       "sentence": 4,
-      "text": "Inside, the classroom is bright and cheerful \u2014 Teacher Elizabeth, Teacher Virginia, and Teacher Joselyn are busy setting up for a wonderful day!",
+      "text": "Inside, the classroom is bright and cheerful \u2014 Teacher Elizabeth, Teacher Virginia, and Teacher Jocelyn are busy setting up for a wonderful day!",
       "file": "opening_04.mp3"
     }
   ],
@@ -78,7 +78,7 @@
     },
     {
       "sentence": 2,
-      "text": "Morah Sarah claps her hands and says, \"Boker tov, yeladim! Good morning, children! What should we do first?\"",
+      "text": "Morah Sara claps her hands and says, \"Boker tov, yeladim! Good morning, children! What should we do first?\"",
       "file": "first-choice_02.mp3"
     }
   ],
@@ -122,7 +122,7 @@
     },
     {
       "sentence": 4,
-      "text": "Chaya is drawing a rainbow, and Mason reads a book with Teacher Joselyn.",
+      "text": "Chaya is drawing a rainbow, and Mason reads a book with Teacher Jocelyn.",
       "file": "free-play_04.mp3"
     },
     {
@@ -232,17 +232,17 @@
   "search-sarah": [
     {
       "sentence": 1,
-      "text": "The kids go to Morah Sarah's office.",
+      "text": "The kids go to Morah Sara's office.",
       "file": "search-sarah_01.mp3"
     },
     {
       "sentence": 2,
-      "text": "\"Morah Sarah, Sparkle is missing!\" says Desi.",
+      "text": "\"Morah Sara, Sparkle is missing!\" says Desi.",
       "file": "search-sarah_02.mp3"
     },
     {
       "sentence": 3,
-      "text": "Morah Sarah smiles and says, \"I think I saw her near the book corner!\"",
+      "text": "Morah Sara smiles and says, \"I think I saw her near the book corner!\"",
       "file": "search-sarah_03.mp3"
     },
     {
@@ -291,7 +291,7 @@
     },
     {
       "sentence": 2,
-      "text": "Teacher Joselyn sets out the supplies on the big craft table.",
+      "text": "Teacher Jocelyn sets out the supplies on the big craft table.",
       "file": "art-choice_02.mp3"
     },
     {
@@ -323,7 +323,7 @@
     },
     {
       "sentence": 5,
-      "text": "Teacher Joselyn helps Desi braid his, and they all paint their challahs golden brown.",
+      "text": "Teacher Jocelyn helps Desi braid his, and they all paint their challahs golden brown.",
       "file": "art-challah_05.mp3"
     },
     {
@@ -350,7 +350,7 @@
     },
     {
       "sentence": 4,
-      "text": "\"These are for your front doors at home!\" says Teacher Joselyn.",
+      "text": "\"These are for your front doors at home!\" says Teacher Jocelyn.",
       "file": "art-mezuzah_04.mp3"
     }
   ],
@@ -441,7 +441,7 @@
     },
     {
       "sentence": 5,
-      "text": "Cru waves, Mia Alma blows a kiss, and little Aila gives one last hug to Morah Sarah.",
+      "text": "Cru waves, Mia Alma blows a kiss, and little Aila gives one last hug to Morah Sara.",
       "file": "closing_05.mp3"
     }
   ],

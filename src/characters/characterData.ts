@@ -16,7 +16,7 @@ export const characters: Record<string, CharacterConfig> = {
   // Staff
   sarah: {
     name: "sarah",
-    displayName: "Morah Sarah",
+    displayName: "Morah Sara",
     role: "director",
     hairColor: "#5C3317",
     hairStyle: "long",
@@ -47,7 +47,7 @@ export const characters: Record<string, CharacterConfig> = {
   },
   joselyn: {
     name: "joselyn",
-    displayName: "Teacher Joselyn",
+    displayName: "Teacher Jocelyn",
     role: "teacher",
     hairColor: "#3D2B1F",
     hairStyle: "bob",
@@ -78,7 +78,7 @@ export const characters: Record<string, CharacterConfig> = {
   },
   ayla: {
     name: "ayla",
-    displayName: "Ayla",
+    displayName: "Aila",
     role: "child",
     hairColor: "#5C3317",
     hairStyle: "long",
@@ -99,7 +99,7 @@ export const characters: Record<string, CharacterConfig> = {
   // Kids — Males
   crew: {
     name: "crew",
-    displayName: "Crew",
+    displayName: "Cru",
     role: "child",
     hairColor: "#4A3728",
     hairStyle: "short",
@@ -119,7 +119,7 @@ export const characters: Record<string, CharacterConfig> = {
   },
   shay: {
     name: "shay",
-    displayName: "Shay",
+    displayName: "Shai",
     role: "child",
     hairColor: "#D4A76A",
     hairStyle: "short",
