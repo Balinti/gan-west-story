@@ -2,9 +2,13 @@ import { useState, useMemo } from "react";
 import { stories, storiesById } from "./data/stories";
 import StoryScreen from "./components/StoryScreen";
 import StorySelector from "./components/StorySelector";
+import IntroVideo from "./components/IntroVideo";
 import { trackStoryStarted, trackStoryCompleted, trackSceneView } from "./utils/analytics";
 
 function App() {
+  const [showIntro, setShowIntro] = useState(
+    () => !sessionStorage.getItem("kidstory_intro_seen")
+  );
   const [selectedStoryId, setSelectedStoryId] = useState<string | null>(null);
   const [started, setStarted] = useState(false);
   const [currentSceneId, setCurrentSceneId] = useState("");
@@ -60,6 +64,18 @@ function App() {
     setStarted(false);
     setHistory([]);
   };
+
+  // Intro video (once per session)
+  if (!story && showIntro) {
+    return (
+      <IntroVideo
+        onComplete={() => {
+          setShowIntro(false);
+          sessionStorage.setItem("kidstory_intro_seen", "1");
+        }}
+      />
+    );
+  }
 
   // No story selected → show story selector
   if (!story) {

@@ -581,6 +581,75 @@ body {
   100% { opacity: 1; transform: scale(1); }
 }
 
+/* ===== Intro Video ===== */
+.intro-container {
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  opacity: 1;
+  transition: opacity 0.4s ease-out;
+}
+
+.intro-container.intro-fade-out {
+  opacity: 0;
+}
+
+.intro-video {
+  max-width: 100%;
+  max-height: 100dvh;
+  object-fit: contain;
+}
+
+.intro-skip-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-family: var(--font-story);
+  color: #FFF;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s;
+}
+
+.intro-skip-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.intro-unmute-btn {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.intro-unmute-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
 /* Desktop: constrain to phone-like viewport */
 @media (min-width: 501px) {
   .app-container {
