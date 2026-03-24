@@ -1,16 +1,16 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import audioManifest from "../data/audioManifest.json";
+import { stories } from "../data/stories";
+import type { AudioEntry } from "../data/story";
 
 const base = import.meta.env.BASE_URL;
 
-type SentenceInfo = {
-  sentence: number;
-  text: string;
-  file: string;
-};
-
-type ManifestType = Record<string, SentenceInfo[]>;
-const manifest = audioManifest as ManifestType;
+// Build a combined audio manifest from all stories
+const combinedManifest: Record<string, AudioEntry[]> = {};
+for (const story of stories) {
+  for (const [sceneId, entries] of Object.entries(story.audioManifest)) {
+    combinedManifest[sceneId] = entries;
+  }
+}
 
 export function useSceneAudio(sceneId: string) {
   const [currentSentenceIndex, setCurrentSentenceIndex] = useState(0);
@@ -19,7 +19,7 @@ export function useSceneAudio(sceneId: string) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const sceneIdRef = useRef(sceneId);
 
-  const sentences = manifest[sceneId] || [];
+  const sentences = combinedManifest[sceneId] || [];
 
   // Reset when scene changes
   useEffect(() => {
@@ -34,8 +34,10 @@ export function useSceneAudio(sceneId: string) {
       audioRef.current = null;
     }
 
+    const currentSentences = combinedManifest[sceneId] || [];
+
     // Start playing first sentence
-    if (sentences.length > 0) {
+    if (currentSentences.length > 0) {
       playSentence(0);
     } else {
       setAllDone(true);
@@ -45,7 +47,7 @@ export function useSceneAudio(sceneId: string) {
 
   const playSentence = useCallback(
     (index: number) => {
-      const s = manifest[sceneIdRef.current];
+      const s = combinedManifest[sceneIdRef.current];
       if (!s || index >= s.length) {
         setAllDone(true);
         setIsPlaying(false);
@@ -58,9 +60,8 @@ export function useSceneAudio(sceneId: string) {
       setIsPlaying(true);
 
       audio.addEventListener("ended", () => {
-        // Move to next sentence
         const nextIndex = index + 1;
-        if (nextIndex < s.length && sceneIdRef.current === sceneIdRef.current) {
+        if (nextIndex < s.length) {
           playSentence(nextIndex);
         } else {
           setAllDone(true);
@@ -69,7 +70,6 @@ export function useSceneAudio(sceneId: string) {
       });
 
       audio.addEventListener("error", () => {
-        // Skip failed audio, move on
         const nextIndex = index + 1;
         if (nextIndex < s.length) {
           playSentence(nextIndex);
@@ -80,7 +80,6 @@ export function useSceneAudio(sceneId: string) {
       });
 
       audio.play().catch(() => {
-        // Autoplay blocked - mark as done so user can still interact
         setAllDone(true);
         setIsPlaying(false);
       });

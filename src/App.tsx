@@ -1,53 +1,92 @@
 import { useState, useMemo } from "react";
-import { scenes, mainPathScenes } from "./data/story";
+import { stories, storiesById } from "./data/stories";
 import StoryScreen from "./components/StoryScreen";
-
-const base = import.meta.env.BASE_URL;
+import StorySelector from "./components/StorySelector";
+import { trackStoryStarted, trackStoryCompleted, trackSceneView } from "./utils/analytics";
 
 function App() {
+  const [selectedStoryId, setSelectedStoryId] = useState<string | null>(null);
   const [started, setStarted] = useState(false);
-  const [currentSceneId, setCurrentSceneId] = useState("opening");
-  const [history, setHistory] = useState<string[]>(["opening"]);
+  const [currentSceneId, setCurrentSceneId] = useState("");
+  const [history, setHistory] = useState<string[]>([]);
 
-  const currentScene = scenes[currentSceneId];
+  const story = selectedStoryId ? storiesById[selectedStoryId] : null;
+  const currentScene = story ? story.scenes[currentSceneId] : null;
 
   const progress = useMemo(() => {
+    if (!story) return 0;
     let maxIdx = 0;
     for (const visited of history) {
-      const idx = mainPathScenes.indexOf(visited);
+      const idx = story.mainPathScenes.indexOf(visited);
       if (idx > maxIdx) maxIdx = idx;
     }
     return maxIdx;
-  }, [history]);
+  }, [history, story]);
+
+  const handleSelectStory = (storyId: string) => {
+    const s = storiesById[storyId];
+    setSelectedStoryId(storyId);
+    setCurrentSceneId(s.firstSceneId);
+    setHistory([s.firstSceneId]);
+    setStarted(false);
+  };
 
   const handleNext = (nextSceneId: string) => {
     setCurrentSceneId(nextSceneId);
     setHistory((prev) => [...prev, nextSceneId]);
+    trackSceneView(nextSceneId);
+    if (story && nextSceneId === story.endSceneId) trackStoryCompleted();
   };
 
+  const handleBack = () => {
+    if (history.length <= 1) return;
+    const newHistory = history.slice(0, -1);
+    setHistory(newHistory);
+    setCurrentSceneId(newHistory[newHistory.length - 1]);
+  };
+
+  const canGoBack = started && history.length > 1;
+
   const handleRestart = () => {
-    setCurrentSceneId("opening");
-    setHistory(["opening"]);
+    if (story) {
+      setCurrentSceneId(story.firstSceneId);
+      setHistory([story.firstSceneId]);
+    }
     setStarted(false);
   };
 
+  const handleHome = () => {
+    setSelectedStoryId(null);
+    setStarted(false);
+    setHistory([]);
+  };
+
+  // No story selected → show story selector
+  if (!story) {
+    return <StorySelector stories={stories} onSelect={handleSelectStory} />;
+  }
+
+  // Story selected but not started → show start screen
   if (!started) {
     return (
       <div className="app-container">
         <div className="story-screen start-screen">
           <img
-            src={`${base}scenes/opening.png`}
+            src={story.coverImage}
             alt=""
             className="start-bg"
           />
           <div className="start-overlay">
-            <h1 className="start-title">A Day at Gan West</h1>
-            <p className="start-subtitle">An Interactive Story</p>
+            <h1 className="start-title">{story.title}</h1>
+            <p className="start-subtitle">{story.subtitle}</p>
             <button
               className="start-button"
-              onClick={() => setStarted(true)}
+              onClick={() => { setStarted(true); trackStoryStarted(); trackSceneView(story.firstSceneId); }}
             >
               Start Story
+            </button>
+            <button className="home-link" onClick={handleHome}>
+              Choose Another Story
             </button>
           </div>
         </div>
@@ -63,10 +102,14 @@ function App() {
     <div className="app-container">
       <StoryScreen
         scene={currentScene}
+        sceneId={currentSceneId}
         onNext={handleNext}
+        onBack={handleBack}
+        canGoBack={canGoBack}
+        onHome={handleHome}
         progress={progress}
-        totalScenes={mainPathScenes.length - 1}
-        isEnd={currentScene.id === "end"}
+        totalScenes={story.mainPathScenes.length - 1}
+        isEnd={currentSceneId === story.endSceneId}
         onRestart={handleRestart}
       />
     </div>

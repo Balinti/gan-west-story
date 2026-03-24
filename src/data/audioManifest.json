@@ -156,7 +156,27 @@
       "sentence": 5,
       "text": "Yum yum yum!",
       "file": "snack-time_05.mp3"
+    },
+    {
+      "sentence": 6,
+      "text": "Now what should we do?",
+      "file": "snack-time_06.mp3"
     }
+  ],
+  "story-time": [
+    { "sentence": 1, "text": "Teacher Elizabeth opens a big colorful book.", "file": "story-time_01.mp3" },
+    { "sentence": 2, "text": "Everyone snuggles close on the reading rug.", "file": "story-time_02.mp3" },
+    { "sentence": 3, "text": "\"Once upon a time...\" she begins.", "file": "story-time_03.mp3" },
+    { "sentence": 4, "text": "Cru makes funny sound effects, and Mia Alma acts out the characters!", "file": "story-time_04.mp3" },
+    { "sentence": 5, "text": "Everyone laughs and claps at the happy ending.", "file": "story-time_05.mp3" }
+  ],
+  "dance-party": [
+    { "sentence": 1, "text": "Teacher Virginia puts on music and everyone dances!", "file": "dance-party_01.mp3" },
+    { "sentence": 2, "text": "Shai spins around and around.", "file": "dance-party_02.mp3" },
+    { "sentence": 3, "text": "Chaya does the hokey pokey.", "file": "dance-party_03.mp3" },
+    { "sentence": 4, "text": "Mason and Desi do a silly robot dance.", "file": "dance-party_04.mp3" },
+    { "sentence": 5, "text": "Mia Alexandra twirls like a ballerina.", "file": "dance-party_05.mp3" },
+    { "sentence": 6, "text": "Everyone is laughing and moving to the beat!", "file": "dance-party_06.mp3" }
   ],
   "mystery": [
     {
@@ -355,36 +375,25 @@
     }
   ],
   "outdoor-play": [
-    {
-      "sentence": 1,
-      "text": "Playground time!",
-      "file": "outdoor-play_01.mp3"
-    },
-    {
-      "sentence": 2,
-      "text": "Everyone runs outside into the sunshine.",
-      "file": "outdoor-play_02.mp3"
-    },
-    {
-      "sentence": 3,
-      "text": "Shai goes down the big slide \u2014 wheee!",
-      "file": "outdoor-play_03.mp3"
-    },
-    {
-      "sentence": 4,
-      "text": "Cru and Desi play on the swings, Mia Alexandra and Aila dig in the sandbox, and Mia Alma plays tag with Mason.",
-      "file": "outdoor-play_04.mp3"
-    },
-    {
-      "sentence": 5,
-      "text": "The teachers watch and clap and laugh.",
-      "file": "outdoor-play_05.mp3"
-    },
-    {
-      "sentence": 6,
-      "text": "What a perfect day!",
-      "file": "outdoor-play_06.mp3"
-    }
+    { "sentence": 1, "text": "Playground time!", "file": "outdoor-play_01.mp3" },
+    { "sentence": 2, "text": "Everyone runs outside into the sunshine.", "file": "outdoor-play_02.mp3" },
+    { "sentence": 3, "text": "There's so much to do!", "file": "outdoor-play_03.mp3" },
+    { "sentence": 4, "text": "What do you want to play?", "file": "outdoor-play_04.mp3" }
+  ],
+  "big-slide": [
+    { "sentence": 1, "text": "Shai climbs up to the very top of the big slide.", "file": "big-slide_01.mp3" },
+    { "sentence": 2, "text": "\"Watch me!\" he shouts.", "file": "big-slide_02.mp3" },
+    { "sentence": 3, "text": "Wheeeee! He zooms down so fast!", "file": "big-slide_03.mp3" },
+    { "sentence": 4, "text": "Then Cru goes, then Mia Alma, then everyone takes a turn.", "file": "big-slide_04.mp3" },
+    { "sentence": 5, "text": "Mason goes down backwards and everyone laughs!", "file": "big-slide_05.mp3" },
+    { "sentence": 6, "text": "Teacher Jocelyn catches them at the bottom with big hugs.", "file": "big-slide_06.mp3" }
+  ],
+  "sandbox-castle": [
+    { "sentence": 1, "text": "Mia Alexandra and Aila start building the biggest sandcastle ever!", "file": "sandbox-castle_01.mp3" },
+    { "sentence": 2, "text": "Desi brings buckets of sand, and Chaya decorates it with little sticks and leaves.", "file": "sandbox-castle_02.mp3" },
+    { "sentence": 3, "text": "\"It's a castle for Sparkle!\" says Aila.", "file": "sandbox-castle_03.mp3" },
+    { "sentence": 4, "text": "They add a tiny flag on top made from a leaf.", "file": "sandbox-castle_04.mp3" },
+    { "sentence": 5, "text": "It's beautiful!", "file": "sandbox-castle_05.mp3" }
   ],
   "shabbat-prep": [
     {
@@ -416,7 +425,25 @@
       "sentence": 6,
       "text": "Shabbat Shalom!",
       "file": "shabbat-prep_06.mp3"
+    },
+    {
+      "sentence": 7,
+      "text": "Before we go home, one more thing!",
+      "file": "shabbat-prep_07.mp3"
     }
+  ],
+  "group-photo": [
+    { "sentence": 1, "text": "Everyone squeezes together for a big group photo!", "file": "group-photo_01.mp3" },
+    { "sentence": 2, "text": "\"Say challah!\" says Morah Sara, holding up the camera.", "file": "group-photo_02.mp3" },
+    { "sentence": 3, "text": "\"CHALLAH!\" everyone shouts with the biggest smiles.", "file": "group-photo_03.mp3" },
+    { "sentence": 4, "text": "Click! What a perfect picture of the best class ever!", "file": "group-photo_04.mp3" }
+  ],
+  "goodbye-song": [
+    { "sentence": 1, "text": "Everyone stands in a circle and holds hands.", "file": "goodbye-song_01.mp3" },
+    { "sentence": 2, "text": "Teacher Virginia plays guitar and they all sing the goodbye song together.", "file": "goodbye-song_02.mp3" },
+    { "sentence": 3, "text": "\"Shalom chaverim, shalom chaverim, shalom, shalom!\"", "file": "goodbye-song_03.mp3" },
+    { "sentence": 4, "text": "\"L'hitraot, l'hitraot, shalom, shalom!\"", "file": "goodbye-song_04.mp3" },
+    { "sentence": 5, "text": "Everyone sways back and forth and smiles.", "file": "goodbye-song_05.mp3" }
   ],
   "closing": [
     {
