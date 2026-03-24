@@ -172,8 +172,8 @@ export const forum: Story = {
       characters: ["Mia", "Sophia", "Givi", "Alexander"],
       background: "playground-inside",
       choices: [
-        { label: "Ball Pit!", nextScene: "forum-ball-pit" },
-        { label: "Slides!", nextScene: "forum-slides" },
+        { label: "Ball Pit!", nextScene: "forum-ball-pit", image: "choices/forum-ball-pit.jpg" },
+        { label: "Slides!", nextScene: "forum-slides", image: "choices/forum-slides.jpg" },
       ],
     },
     "forum-ball-pit": {
@@ -210,8 +210,8 @@ export const forum: Story = {
       characters: ["David", "Mia", "Sophia", "Givi", "Alexander"],
       background: "playground-inside",
       choices: [
-        { label: "Trampolines!", nextScene: "forum-trampoline" },
-        { label: "Pretend Kitchen!", nextScene: "forum-kitchen" },
+        { label: "Trampolines!", nextScene: "forum-trampoline", image: "choices/forum-trampoline.jpg" },
+        { label: "Pretend Kitchen!", nextScene: "forum-kitchen", image: "choices/forum-kitchen.jpg" },
       ],
     },
     "forum-trampoline": {
