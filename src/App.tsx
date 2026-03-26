@@ -38,8 +38,10 @@ function App() {
   const handleNext = (nextSceneId: string) => {
     setCurrentSceneId(nextSceneId);
     setHistory((prev) => [...prev, nextSceneId]);
-    trackSceneView(nextSceneId);
-    if (story && nextSceneId === story.endSceneId) trackStoryCompleted();
+    if (story) {
+      trackSceneView(story.id, nextSceneId);
+      if (nextSceneId === story.endSceneId) trackStoryCompleted(story.id);
+    }
   };
 
   const handleBack = () => {
@@ -97,7 +99,7 @@ function App() {
             <p className="start-subtitle">{story.subtitle}</p>
             <button
               className="start-button"
-              onClick={() => { setStarted(true); trackStoryStarted(); trackSceneView(story.firstSceneId); }}
+              onClick={() => { setStarted(true); trackStoryStarted(story.id); trackSceneView(story.id, story.firstSceneId); }}
             >
               Start Story
             </button>
@@ -119,6 +121,7 @@ function App() {
       <StoryScreen
         scene={currentScene}
         sceneId={currentSceneId}
+        storyId={story.id}
         onNext={handleNext}
         onBack={handleBack}
         canGoBack={canGoBack}

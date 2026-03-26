@@ -10,6 +10,7 @@ import { trackChoiceMade } from "../utils/analytics";
 type Props = {
   scene: Scene;
   sceneId: string;
+  storyId: string;
   onNext: (nextSceneId: string) => void;
   onBack: () => void;
   canGoBack: boolean;
@@ -23,6 +24,7 @@ type Props = {
 export default function StoryScreen({
   scene,
   sceneId,
+  storyId,
   onNext,
   onBack,
   canGoBack,
@@ -50,7 +52,7 @@ export default function StoryScreen({
   };
 
   const handleChoice = (choice: Choice) => {
-    trackChoiceMade(choice.label, sceneId, choice.nextScene);
+    trackChoiceMade(storyId, choice.label, sceneId, choice.nextScene);
     goToScene(choice.nextScene);
   };
 
@@ -70,14 +72,14 @@ export default function StoryScreen({
       <ProgressBar current={progress} total={totalScenes} />
 
       {canGoBack && (
-        <button className="back-button" onClick={onBack} aria-label="Go back">
+        <button className="back-button" onClick={() => { skipAll(); onBack(); }} aria-label="Go back">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M15 19l-7-7 7-7" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </button>
       )}
 
-      <button className="home-button" onClick={onHome} aria-label="Home">
+      <button className="home-button" onClick={() => { skipAll(); onHome(); }} aria-label="Home">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
           <path d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
@@ -112,7 +114,7 @@ export default function StoryScreen({
           )}
 
           {isEnd && allDone && (
-            <button className="restart-button" onClick={onRestart}>
+            <button className="restart-button" onClick={() => { skipAll(); onRestart(); }}>
               Read Again!
             </button>
           )}

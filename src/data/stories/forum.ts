@@ -24,7 +24,7 @@ export const forumSceneImages: Record<string, string> = {
 export const forum: Story = {
   id: "forum",
   title: "Playground Day!",
-  subtitle: "Four Families, One Big Adventure",
+  subtitle: "L.A. Friends",
   coverImage: `${base}scenes/forum-opening.png`,
   firstSceneId: "forum-opening",
   endSceneId: "forum-end",

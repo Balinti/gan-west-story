@@ -42,6 +42,14 @@ export function useSceneAudio(sceneId: string) {
     } else {
       setAllDone(true);
     }
+
+    // Cleanup on unmount or scene change — stop audio immediately
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current = null;
+      }
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sceneId]);
 
