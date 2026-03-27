@@ -1,12 +1,12 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import { stories } from "../data/stories";
+import { stories, hiddenStories } from "../data/stories";
 import type { AudioEntry } from "../data/story";
 
 const base = import.meta.env.BASE_URL;
 
 // Build a combined audio manifest from all stories
 const combinedManifest: Record<string, AudioEntry[]> = {};
-for (const story of stories) {
+for (const story of [...stories, ...hiddenStories]) {
   for (const [sceneId, entries] of Object.entries(story.audioManifest)) {
     combinedManifest[sceneId] = entries;
   }
