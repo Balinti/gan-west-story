@@ -28,7 +28,6 @@ export const uganda: Story = {
   coverImage: `${base}scenes/uganda-opening.png`,
   firstSceneId: "uganda-opening",
   endSceneId: "uganda-end",
-  landscape: true,
   audioManifest: {
     "uganda-opening": [
       { sentence: 1, text: "Something very exciting is happening! Three families are at the airport!", file: "uganda-opening_01.mp3" },
