@@ -4,12 +4,13 @@ import { zoo, zooSceneImages } from "./zoo";
 import { forum, forumSceneImages } from "./forum";
 import { pool, poolSceneImages } from "./pool";
 import { uganda, ugandaSceneImages } from "./uganda";
+import { palmsprings, palmspringsSceneImages } from "./palmsprings";
 
 /** Stories shown in the main menu */
 export const stories: Story[] = [ganWest, zoo, forum];
 
 /** Hidden stories accessible via direct URL only */
-export const hiddenStories: Story[] = [pool, uganda];
+export const hiddenStories: Story[] = [pool, uganda, palmsprings];
 
 export const storiesById: Record<string, Story> = {
   [ganWest.id]: ganWest,
@@ -17,6 +18,7 @@ export const storiesById: Record<string, Story> = {
   [forum.id]: forum,
   [pool.id]: pool,
   [uganda.id]: uganda,
+  [palmsprings.id]: palmsprings,
 };
 
 export const allSceneImages: Record<string, string> = {
@@ -25,4 +27,5 @@ export const allSceneImages: Record<string, string> = {
   ...forumSceneImages,
   ...poolSceneImages,
   ...ugandaSceneImages,
+  ...palmspringsSceneImages,
 };
