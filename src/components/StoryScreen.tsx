@@ -4,6 +4,7 @@ import SceneBackground from "./SceneBackground";
 import NarrationText from "./NarrationText";
 import ChoiceButtons from "./ChoiceButtons";
 import ProgressBar from "./ProgressBar";
+import RotateOverlay from "./RotateOverlay";
 import { useSceneAudio } from "../hooks/useSceneAudio";
 import { trackChoiceMade } from "../utils/analytics";
 
@@ -19,6 +20,7 @@ type Props = {
   totalScenes: number;
   isEnd: boolean;
   onRestart: () => void;
+  landscape?: boolean;
 };
 
 export default function StoryScreen({
@@ -33,6 +35,7 @@ export default function StoryScreen({
   totalScenes,
   isEnd,
   onRestart,
+  landscape,
 }: Props) {
   const [transitioning, setTransitioning] = useState(false);
   const { sentences, currentSentenceIndex, allDone, skipAll } = useSceneAudio(
@@ -68,7 +71,8 @@ export default function StoryScreen({
   const showContinue = allDone && !hasChoices && !isEnd && scene.next;
 
   return (
-    <div className={`story-screen ${transitioning ? "fade-out" : "fade-in"}`}>
+    <div className={`story-screen ${transitioning ? "fade-out" : "fade-in"}${landscape ? " landscape-story" : ""}`}>
+      {landscape && <RotateOverlay />}
       <ProgressBar current={progress} total={totalScenes} />
 
       {canGoBack && (

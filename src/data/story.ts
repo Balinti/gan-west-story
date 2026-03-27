@@ -29,4 +29,6 @@ export type Story = {
   audioManifest: Record<string, AudioEntry[]>;
   firstSceneId: string;
   endSceneId: string;
+  /** If true, scenes were generated in 16:9 landscape and need landscape viewing */
+  landscape?: boolean;
 };

@@ -28,6 +28,7 @@ export const pool: Story = {
   coverImage: `${base}scenes/pool-opening.png`,
   firstSceneId: "pool-opening",
   endSceneId: "pool-end",
+  landscape: true,
   audioManifest: {
     "pool-opening": [
       { sentence: 1, text: "It's a beautiful Saturday and the Bin family is getting ready for a pool party!", file: "pool-opening_01.mp3" },

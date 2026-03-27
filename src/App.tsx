@@ -153,6 +153,7 @@ function App() {
         totalScenes={story.mainPathScenes.length - 1}
         isEnd={currentSceneId === story.endSceneId}
         onRestart={handleRestart}
+        landscape={story.landscape}
       />
     </div>
   );

@@ -650,6 +650,57 @@ body {
   background: rgba(255, 255, 255, 0.3);
 }
 
+/* ===== Rotate Overlay (landscape stories) ===== */
+.rotate-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+}
+
+.rotate-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.rotate-icon {
+  animation: rotatePhone 2s ease-in-out infinite;
+}
+
+@keyframes rotatePhone {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(90deg); }
+}
+
+.rotate-text {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #FFF;
+  font-family: var(--font-story);
+}
+
+.rotate-subtext {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: var(--font-story);
+}
+
+/* Landscape stories: wider container on desktop */
+.story-screen.landscape-story {
+  max-width: 100%;
+}
+
 /* Desktop: constrain to phone-like viewport */
 @media (min-width: 501px) {
   .app-container {
@@ -660,5 +711,10 @@ body {
     border-radius: 20px;
     max-height: 900px;
     overflow: hidden;
+  }
+
+  .story-screen.landscape-story {
+    max-width: 900px;
+    max-height: 100%;
   }
 }
