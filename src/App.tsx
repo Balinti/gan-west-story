@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { stories, storiesById } from "./data/stories";
+import { stories, storiesById, hiddenStories } from "./data/stories";
 import StoryScreen from "./components/StoryScreen";
 import StorySelector from "./components/StorySelector";
 import IntroVideo from "./components/IntroVideo";
@@ -9,10 +9,32 @@ function App() {
   const [showIntro, setShowIntro] = useState(
     () => !sessionStorage.getItem("kidstory_intro_seen")
   );
-  const [selectedStoryId, setSelectedStoryId] = useState<string | null>(null);
+  const [selectedStoryId, setSelectedStoryId] = useState<string | null>(() => {
+    // Check pathname first (works on dev server), then ?p= param (GitHub Pages 404 redirect)
+    let path = window.location.pathname.replace(/^\//, "");
+    if (!path) {
+      const params = new URLSearchParams(window.location.search);
+      path = (params.get("p") || "").replace(/^\//, "");
+    }
+    const idx = parseInt(path, 10);
+    if (!isNaN(idx) && idx >= 1 && idx <= hiddenStories.length) {
+      return hiddenStories[idx - 1].id;
+    }
+    return null;
+  });
   const [started, setStarted] = useState(false);
-  const [currentSceneId, setCurrentSceneId] = useState("");
-  const [history, setHistory] = useState<string[]>([]);
+  const [currentSceneId, setCurrentSceneId] = useState(() => {
+    if (selectedStoryId) {
+      return storiesById[selectedStoryId].firstSceneId;
+    }
+    return "";
+  });
+  const [history, setHistory] = useState<string[]>(() => {
+    if (selectedStoryId) {
+      return [storiesById[selectedStoryId].firstSceneId];
+    }
+    return [];
+  });
 
   const story = selectedStoryId ? storiesById[selectedStoryId] : null;
   const currentScene = story ? story.scenes[currentSceneId] : null;
@@ -65,6 +87,7 @@ function App() {
     setSelectedStoryId(null);
     setStarted(false);
     setHistory([]);
+    window.history.replaceState(null, "", "/");
   };
 
   // Intro video (once per session)
