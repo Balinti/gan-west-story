@@ -6,7 +6,7 @@ const base = import.meta.env.BASE_URL;
 
 // Build a combined audio manifest from all stories
 const combinedManifest: Record<string, AudioEntry[]> = {};
-for (const story of [...stories, ...hiddenStories]) {
+for (const story of [...stories, ...Object.values(hiddenStories)]) {
   for (const [sceneId, entries] of Object.entries(story.audioManifest)) {
     combinedManifest[sceneId] = entries;
   }
