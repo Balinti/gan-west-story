@@ -17,8 +17,8 @@ function App() {
       path = (params.get("p") || "").replace(/^\//, "");
     }
     const idx = parseInt(path, 10);
-    if (!isNaN(idx) && idx >= 1 && idx <= hiddenStories.length) {
-      return hiddenStories[idx - 1].id;
+    if (!isNaN(idx) && idx in hiddenStories) {
+      return hiddenStories[idx].id;
     }
     return null;
   });
