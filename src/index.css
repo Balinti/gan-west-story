@@ -331,7 +331,8 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  overflow-y: auto;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
 }
 
 .selector-content {
