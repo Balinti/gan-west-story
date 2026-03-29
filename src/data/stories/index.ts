@@ -7,10 +7,10 @@ import { uganda, ugandaSceneImages } from "./uganda";
 import { palmsprings, palmspringsSceneImages } from "./palmsprings";
 
 /** Stories shown in the main menu */
-export const stories: Story[] = [ganWest, zoo, forum, palmsprings];
+export const stories: Story[] = [ganWest, zoo, forum, palmsprings, uganda];
 
 /** Hidden stories accessible via direct URL only */
-export const hiddenStories: Story[] = [pool, uganda];
+export const hiddenStories: Story[] = [pool];
 
 export const storiesById: Record<string, Story> = {
   [ganWest.id]: ganWest,

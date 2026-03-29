@@ -329,8 +329,9 @@ body {
 .story-selector {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  overflow-y: auto;
 }
 
 .selector-content {
@@ -340,6 +341,7 @@ body {
   align-items: center;
   gap: 24px;
   width: 100%;
+  min-height: min-content;
 }
 
 .selector-title {
