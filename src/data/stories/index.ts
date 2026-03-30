@@ -8,12 +8,11 @@ import { palmsprings, palmspringsSceneImages } from "./palmsprings";
 import { zoo2, zoo2SceneImages } from "./zoo2";
 
 /** Stories shown in the main menu */
-export const stories: Story[] = [ganWest, zoo, forum, palmsprings, uganda];
+export const stories: Story[] = [ganWest, zoo2, forum, palmsprings, uganda];
 
 /** Hidden stories accessible via direct URL only (keyed by URL number) */
 export const hiddenStories: Record<number, Story> = {
   1: pool,
-  4: zoo2,
 };
 
 export const storiesById: Record<string, Story> = {
