@@ -161,8 +161,8 @@ export const zoo2: Story = {
       characters: ["Cru", "Mason", "Mia Alma", "Aila", "Shai", "Chaya", "Desi", "Mia Alexandra"],
       background: "zoo-fork-path",
       choices: [
-        { label: "Safari!", nextScene: "zoo2-safari", image: "choices/zoo2-safari.jpg" },
-        { label: "Jungle!", nextScene: "zoo2-jungle", image: "choices/zoo2-jungle.jpg" },
+        { label: "Safari!", nextScene: "zoo2-safari", image: "choices/zoo2-choice-safari.jpg" },
+        { label: "Jungle!", nextScene: "zoo2-jungle", image: "choices/zoo2-choice-jungle.jpg" },
       ],
     },
     "zoo2-safari": {
@@ -192,8 +192,8 @@ export const zoo2: Story = {
       characters: ["Cru", "Mason", "Mia Alma", "Aila", "Shai", "Chaya", "Desi", "Mia Alexandra"],
       background: "zoo-fork-path",
       choices: [
-        { label: "Ocean World!", nextScene: "zoo2-ocean", image: "choices/zoo2-ocean.jpg" },
-        { label: "Reptile House!", nextScene: "zoo2-reptiles", image: "choices/zoo2-reptiles.jpg" },
+        { label: "Ocean World!", nextScene: "zoo2-ocean", image: "choices/zoo2-choice-ocean.jpg" },
+        { label: "Reptile House!", nextScene: "zoo2-reptiles", image: "choices/zoo2-choice-reptiles.jpg" },
       ],
     },
     "zoo2-ocean": {
