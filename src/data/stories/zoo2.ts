@@ -38,7 +38,7 @@ export const zoo2: Story = {
       { sentence: 1, text: "Everyone climbs onto the big yellow school bus.", file: "zoo2-bus_01.mp3" },
       { sentence: 2, text: "Shai and Chaya sit together. Shai presses his face against the window.", file: "zoo2-bus_02.mp3" },
       { sentence: 3, text: "Mia Alma points at everything outside. \"Look! A doggy!\"", file: "zoo2-bus_03.mp3" },
-      { sentence: 4, text: "Desi hugs her scavenger card tight. She's ready to find ALL the animals!", file: "zoo2-bus_04.mp3" },
+      { sentence: 4, text: "Desi hugs his scavenger card tight. He's ready to find ALL the animals!", file: "zoo2-bus_04.mp3" },
       { sentence: 5, text: "Aila sings the wheels on the bus. Soon everyone joins in!", file: "zoo2-bus_05.mp3" },
     ],
     "zoo2-gates": [
@@ -71,7 +71,7 @@ export const zoo2: Story = {
       { sentence: 2, text: "Teacher Elizabeth passes out animal crackers and juice boxes.", file: "zoo2-snack_02.mp3" },
       { sentence: 3, text: "\"I found the lion!\" says Mason, holding up his card.", file: "zoo2-snack_03.mp3" },
       { sentence: 4, text: "\"We found monkeys AND parrots!\" says Shai. Everyone compares their cards.", file: "zoo2-snack_04.mp3" },
-      { sentence: 5, text: "Desi counts her check marks. \"We still need more animals!\"", file: "zoo2-snack_05.mp3" },
+      { sentence: 5, text: "Desi counts his check marks. \"We still need more animals!\"", file: "zoo2-snack_05.mp3" },
     ],
     "zoo2-choice2": [
       { sentence: 1, text: "After snack, two more areas await! Ocean World and the Reptile House.", file: "zoo2-choice2_01.mp3" },
@@ -115,7 +115,7 @@ export const zoo2: Story = {
       { sentence: 1, text: "Back at school, the parents are waiting!", file: "zoo2-end_01.mp3" },
       { sentence: 2, text: "The kids run to show off their scavenger cards and souvenirs.", file: "zoo2-end_02.mp3" },
       { sentence: 3, text: "\"Look, Mama! I'm a Junior Zookeeper!\" says Aila, pointing at her sticker.", file: "zoo2-end_03.mp3" },
-      { sentence: 4, text: "Desi makes her parrot fly through the air. \"Squawk! Squawk!\"", file: "zoo2-end_04.mp3" },
+      { sentence: 4, text: "Desi makes his parrot fly through the air. \"Squawk! Squawk!\"", file: "zoo2-end_04.mp3" },
       { sentence: 5, text: "What a wonderful zoo adventure with friends! Maybe next time they'll find even more animals!", file: "zoo2-end_05.mp3" },
     ],
   },
