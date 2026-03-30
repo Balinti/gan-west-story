@@ -31,7 +31,7 @@ export const zoo2: Story = {
       { sentence: 1, text: "It's field trip day at Gan West! The kids are so excited!", file: "zoo2-opening_01.mp3" },
       { sentence: 2, text: "Morah Sarah claps her hands. \"Today we're going to the zoo!\"", file: "zoo2-opening_02.mp3" },
       { sentence: 3, text: "\"The zoo! The zoo!\" Cru bounces up and down. Mason claps his hands.", file: "zoo2-opening_03.mp3" },
-      { sentence: 4, text: "Morah Elizabeth hands out special cards. \"These are your scavenger hunt cards!\"", file: "zoo2-opening_04.mp3" },
+      { sentence: 4, text: "Teacher Elizabeth hands out special cards. \"These are your scavenger hunt cards!\"", file: "zoo2-opening_04.mp3" },
       { sentence: 5, text: "Each card has pictures of animals to find. Lions, monkeys, penguins, and more!", file: "zoo2-opening_05.mp3" },
     ],
     "zoo2-bus": [
@@ -46,7 +46,7 @@ export const zoo2: Story = {
       { sentence: 2, text: "\"Welcome, Gan West!\" she says. \"I'm Zookeeper Jenny!\"", file: "zoo2-gates_02.mp3" },
       { sentence: 3, text: "\"When you see an animal from your card, give it a big check mark!\"", file: "zoo2-gates_03.mp3" },
       { sentence: 4, text: "\"If you find them all, there's a special surprise at the end!\"", file: "zoo2-gates_04.mp3" },
-      { sentence: 5, text: "The kids cheer! Morah Virginia and Morah Jocelyn help everyone hold hands.", file: "zoo2-gates_05.mp3" },
+      { sentence: 5, text: "The kids cheer! Teacher Virginia and Teacher Jocelyn help everyone hold hands.", file: "zoo2-gates_05.mp3" },
     ],
     "zoo2-choice1": [
       { sentence: 1, text: "Inside the zoo, there are two paths! One goes to the Safari and one goes to the Jungle.", file: "zoo2-choice1_01.mp3" },
@@ -68,7 +68,7 @@ export const zoo2: Story = {
     ],
     "zoo2-snack": [
       { sentence: 1, text: "Everyone meets at the picnic area for snack time.", file: "zoo2-snack_01.mp3" },
-      { sentence: 2, text: "Morah Elizabeth passes out animal crackers and juice boxes.", file: "zoo2-snack_02.mp3" },
+      { sentence: 2, text: "Teacher Elizabeth passes out animal crackers and juice boxes.", file: "zoo2-snack_02.mp3" },
       { sentence: 3, text: "\"I found the lion!\" says Mason, holding up his card.", file: "zoo2-snack_03.mp3" },
       { sentence: 4, text: "\"We found monkeys AND parrots!\" says Shai. Everyone compares their cards.", file: "zoo2-snack_04.mp3" },
       { sentence: 5, text: "Desi counts her check marks. \"We still need more animals!\"", file: "zoo2-snack_05.mp3" },
@@ -109,7 +109,7 @@ export const zoo2: Story = {
       { sentence: 1, text: "Back on the bus, everyone is tired but happy.", file: "zoo2-bus-home_01.mp3" },
       { sentence: 2, text: "Shai leans on Chaya's shoulder. Mason hugs his stuffed snake.", file: "zoo2-bus-home_02.mp3" },
       { sentence: 3, text: "Cru shows his lion to Mia Alma. \"Rawr!\" \"Rawr!\" she copies.", file: "zoo2-bus-home_03.mp3" },
-      { sentence: 4, text: "Morah Virginia counts heads. \"All eight friends, safe and sound!\"", file: "zoo2-bus-home_04.mp3" },
+      { sentence: 4, text: "Teacher Virginia counts heads. \"All eight friends, safe and sound!\"", file: "zoo2-bus-home_04.mp3" },
     ],
     "zoo2-end": [
       { sentence: 1, text: "Back at school, the parents are waiting!", file: "zoo2-end_01.mp3" },
@@ -137,7 +137,7 @@ export const zoo2: Story = {
     "zoo2-opening": {
       id: "zoo2-opening",
       text: "",
-      characters: ["Morah Sarah", "Morah Elizabeth", "Cru", "Mason", "Mia Alma", "Aila", "Shai", "Chaya", "Desi", "Mia Alexandra"],
+      characters: ["Morah Sarah", "Teacher Elizabeth", "Cru", "Mason", "Mia Alma", "Aila", "Shai", "Chaya", "Desi", "Mia Alexandra"],
       background: "gan-west-classroom",
       next: "zoo2-bus",
     },
@@ -151,7 +151,7 @@ export const zoo2: Story = {
     "zoo2-gates": {
       id: "zoo2-gates",
       text: "",
-      characters: ["Zookeeper Jenny", "Morah Virginia", "Morah Jocelyn", "Cru", "Mason", "Shai", "Chaya"],
+      characters: ["Zookeeper Jenny", "Teacher Virginia", "Teacher Jocelyn", "Cru", "Mason", "Shai", "Chaya"],
       background: "zoo-entrance",
       next: "zoo2-choice1",
     },
@@ -182,7 +182,7 @@ export const zoo2: Story = {
     "zoo2-snack": {
       id: "zoo2-snack",
       text: "",
-      characters: ["Morah Elizabeth", "Mason", "Shai", "Desi", "Cru", "Mia Alma"],
+      characters: ["Teacher Elizabeth", "Mason", "Shai", "Desi", "Cru", "Mia Alma"],
       background: "zoo-picnic-area",
       next: "zoo2-choice2",
     },
@@ -199,7 +199,7 @@ export const zoo2: Story = {
     "zoo2-ocean": {
       id: "zoo2-ocean",
       text: "",
-      characters: ["Desi", "Aila", "Mia Alma", "Morah Virginia"],
+      characters: ["Desi", "Aila", "Mia Alma", "Teacher Virginia"],
       background: "zoo-ocean-world",
       next: "zoo2-scavenger-done",
     },
@@ -227,7 +227,7 @@ export const zoo2: Story = {
     "zoo2-bus-home": {
       id: "zoo2-bus-home",
       text: "",
-      characters: ["Shai", "Chaya", "Cru", "Mia Alma", "Mason", "Morah Virginia"],
+      characters: ["Shai", "Chaya", "Cru", "Mia Alma", "Mason", "Teacher Virginia"],
       background: "school-bus-home",
       next: "zoo2-end",
     },
