@@ -1,5 +1,37 @@
 # Project Instructions
 
+## Character Reference Disambiguation — CRITICAL
+
+There are MULTIPLE characters whose names START with "Mia". NEVER confuse them.
+
+| Name in story | EXACT reference path | Description |
+|---|---|---|
+| **Mia** (LA Friends stories) | `public/characters/forum/Mia.jpg` | White toddler, reddish-brown pigtails, blue eyes, yellow shirt + orange overalls |
+| **Mia Alma** (Gan West) | `public/characters/Mia_Alma.jpg` | Same visual as LA Friends Mia (white, pigtails, overalls) |
+| **Mia Alexandra** (Gan West) | `public/characters/Mia_Alexandra.jpg` | Black/African-American toddler, blonde curly bun, purple top |
+
+**Rules:**
+- Stories with `la-friends` or `bluey` type → "Mia" = `public/characters/forum/Mia.jpg` ONLY. Never Mia_Alma, never Mia_Alexandra.
+- Stories with `gan-west` type → use whichever Mia_* the user specified; never substitute.
+- The GitHub Pages URL for LA Friends Mia is: `https://kidstory.online/characters/forum/Mia.jpg` (case sensitive!)
+- **NEVER** use multiple "Mia" refs in the same scene unless the story explicitly has multiple Mia characters meeting.
+
+## Pipeline Cancellation Rules
+
+- **DO NOT DELETE AUDIO** when cancelling/restarting a pipeline. Audio narration text is rarely visual-character-specific and is usually reusable. Only delete audio when the story text itself has changed.
+- When cancelling: only delete image files (scenes + choices), keep audio for reuse if user wants.
+- When restarting: audio-lines.json is cheap to regenerate — but existing mp3s can often be reused if concept is same.
+- **ElevenLabs history API returns 0 items** on this account (likely plan limitation) — so once a mp3 is deleted locally, it's gone. BE CAREFUL with `rm` commands.
+- **ALWAYS preserve the audio-lines.json file** (copy it to `data/audio-lines-backup-{jobId}.json` on cancel) so narration text can be replayed cheaply.
+
+## Bluey / Heeler Family Rules
+
+- **NO CLOTHES.** The Heeler family characters in the source material wear their natural fur, not T-shirts/pants. When generating scenes OR character refs, prompt for their natural heeler fur colors ONLY — no added clothing. Exception: if a scene explicitly involves costumes (e.g. pajamas, swimsuits), mention that explicitly.
+- Size rule: Bluey and Mia (LA Friends) must be the SAME height in any shared scene (both toddler scale). Bingo slightly shorter than Bluey. Adults (Bandit, Chilli, Stripe, Trixie, Bob, Nana) clearly much taller.
+- Character reference images live in `public/characters/bluey/` — GitHub Pages URL: `https://kidstory.online/characters/bluey/<Name>.png` (case sensitive!)
+- Trixie and Muffin are **WHITE/GREY with black spots** (NOT yellow). Check refs before prompting.
+- Socks is a **tiny grey-blue BABY** — smallest of all kids, often on all fours.
+
 ## Image Generation — MANDATORY RULES
 
 **Read `memory/image-generation.md` BEFORE generating ANY image. No exceptions.**
