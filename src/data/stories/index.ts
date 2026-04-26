@@ -7,6 +7,7 @@ import { uganda, ugandaSceneImages } from "./uganda";
 import { palmsprings, palmspringsSceneImages } from "./palmsprings";
 import { zoo2, zoo2SceneImages } from "./zoo2";
 import { blueyPlayground, blueyPlaygroundSceneImages } from "./bluey-playground";
+import { gardenBugs, gardenBugsSceneImages } from "./garden-bugs";
 
 /** Stories shown in the main menu */
 export const stories: Story[] = [ganWest, zoo2, forum, palmsprings, uganda];
@@ -15,6 +16,7 @@ export const stories: Story[] = [ganWest, zoo2, forum, palmsprings, uganda];
 export const hiddenStories: Record<number, Story> = {
   1: pool,
   2: blueyPlayground,
+  3: gardenBugs,
 };
 
 export const storiesById: Record<string, Story> = {
@@ -26,6 +28,7 @@ export const storiesById: Record<string, Story> = {
   [palmsprings.id]: palmsprings,
   [zoo2.id]: zoo2,
   [blueyPlayground.id]: blueyPlayground,
+  [gardenBugs.id]: gardenBugs,
 };
 
 export const allSceneImages: Record<string, string> = {
@@ -37,4 +40,5 @@ export const allSceneImages: Record<string, string> = {
   ...palmspringsSceneImages,
   ...zoo2SceneImages,
   ...blueyPlaygroundSceneImages,
+  ...gardenBugsSceneImages,
 };
