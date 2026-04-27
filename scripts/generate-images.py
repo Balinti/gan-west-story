@@ -26,8 +26,10 @@ import sys
 import time
 
 API_KEY = "b9cbc91595f2c612b63bc5ab3c841461"
-BASE_URL = "https://kieai.erweima.ai"
-MODEL = "nano-banana-2"
+BASE_URL = "https://api.kie.ai"
+# IMPORTANT: gpt-image-2-image-to-image is the ONLY allowed model. Do NOT switch to nano-banana.
+# Per project policy. This model accepts up to 16 input refs and produces higher quality results.
+MODEL = "gpt-image-2-image-to-image"
 SCENES_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "public", "scenes")
 CHOICES_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "public", "choices")
 
@@ -49,14 +51,19 @@ def verify_urls(urls):
 
 
 def submit_task(scene):
-    """Submit a single scene to Kie AI. Returns taskId or None."""
+    """Submit a single scene to Kie AI. Returns taskId or None.
+
+    Uses gpt-image-2-image-to-image. Field name for refs is `input_urls` (not
+    `image_input` like nano-banana). No `output_format` field — gpt-image-2
+    returns PNG by default; conversion to jpg for choices is done in
+    download_and_resize.
+    """
     payload = {
         "model": MODEL,
         "input": {
             "prompt": scene["prompt"],
             "aspect_ratio": scene.get("aspect", "9:16"),
-            "output_format": scene.get("format", "png"),
-            "image_input": scene.get("refs", []),
+            "input_urls": scene.get("refs", []),
         },
     }
     for attempt in range(3):

@@ -6,9 +6,11 @@ There are MULTIPLE characters whose names START with "Mia". NEVER confuse them.
 
 | Name in story | EXACT reference path | Description |
 |---|---|---|
-| **Mia** (LA Friends stories) | `public/characters/forum/Mia.jpg` | White toddler, reddish-brown pigtails, blue eyes, yellow shirt + orange overalls |
-| **Mia Alma** (Gan West) | `public/characters/Mia_Alma.jpg` | Same visual as LA Friends Mia (white, pigtails, overalls) |
-| **Mia Alexandra** (Gan West) | `public/characters/Mia_Alexandra.jpg` | Black/African-American toddler, blonde curly bun, purple top |
+| **Mia** (LA Friends stories) | `public/characters/forum/Mia.jpg` | White/light-skinned toddler, reddish-brown TWO pigtail buns (one each side), big blue-grey eyes, yellow t-shirt under ORANGE pinafore overalls, yellow sneakers |
+| **Mia Alma** (Gan West) | `public/characters/Mia_Alma.jpg` | Same visual as LA Friends Mia (white, two pigtail buns, orange overalls dress) |
+| **Mia Alexandra** (Gan West) | `public/characters/Mia_Alexandra.jpg` | LIGHT-MEDIUM skin tone (golden/tan — **NOT Black, NOT African-American**), PALE BLONDE tightly-curled hair in ONE bun on TOP of head, brown eyes, pinkish-purple long-sleeve ribbed top, black-and-white CHECKERED (gingham) pants, pink shoes |
+
+**CRITICAL: Do NOT describe Mia Alexandra as "Black" or "African-American" in any prompt. She is NOT.** Always view `public/characters/Mia_Alexandra.jpg` before writing her into a prompt.
 
 **Rules:**
 - Stories with `la-friends` or `bluey` type → "Mia" = `public/characters/forum/Mia.jpg` ONLY. Never Mia_Alma, never Mia_Alexandra.
