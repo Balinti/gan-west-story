@@ -22,8 +22,21 @@ import os
 import subprocess
 import sys
 import time
+from pathlib import Path
 
-API_KEY = "018045d6c16fd61893005e350a673c7c63abf7fa6c67a3a614f7279dc3712c3a"
+# Auto-load .env from project root (one dir up from scripts/)
+_env_path = Path(__file__).resolve().parent.parent / ".env"
+if _env_path.exists():
+    for _line in _env_path.read_text().splitlines():
+        _line = _line.strip()
+        if _line and not _line.startswith("#") and "=" in _line:
+            _k, _v = _line.split("=", 1)
+            os.environ.setdefault(_k.strip(), _v.strip().strip('"').strip("'"))
+
+API_KEY = os.environ.get("ELEVENLABS_API_KEY", "")
+if not API_KEY:
+    print("ERROR: ELEVENLABS_API_KEY env var not set. Add it to .env or export it.", file=sys.stderr)
+    sys.exit(1)
 VOICE_ID = "cR39HTrtXbjvEP4CNYFx"  # Daphne
 MODEL = "eleven_v3"
 AUDIO_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "public", "audio")

@@ -24,8 +24,21 @@ import os
 import subprocess
 import sys
 import time
+from pathlib import Path
 
-API_KEY = "b9cbc91595f2c612b63bc5ab3c841461"
+# Auto-load .env from project root (one dir up from scripts/)
+_env_path = Path(__file__).resolve().parent.parent / ".env"
+if _env_path.exists():
+    for _line in _env_path.read_text().splitlines():
+        _line = _line.strip()
+        if _line and not _line.startswith("#") and "=" in _line:
+            _k, _v = _line.split("=", 1)
+            os.environ.setdefault(_k.strip(), _v.strip().strip('"').strip("'"))
+
+API_KEY = os.environ.get("KIE_API_KEY", "")
+if not API_KEY:
+    print("ERROR: KIE_API_KEY env var not set. Add it to .env or export it.", file=sys.stderr)
+    sys.exit(1)
 BASE_URL = "https://api.kie.ai"
 # Reverted to nano-banana-2 — gpt-image-2 had transparency/checkerboard issues
 # with multi-ref prompts that nano-banana doesn't have.

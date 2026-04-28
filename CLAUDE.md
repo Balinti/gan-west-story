@@ -1,5 +1,49 @@
 # Project Instructions
 
+## Image Generation Model — MANDATORY
+
+**Use `nano-banana-2` ONLY.** Do NOT switch to `gpt-image-2-image-to-image` — it produces persistent transparency-checkerboard artifacts in backgrounds when given multiple character refs (their grey/transparent backgrounds leak into the output as grid patterns). Nano-banana-2 handles multi-ref prompts cleanly.
+
+The script `scripts/generate-images.py` is configured for nano-banana-2. Field name is `image_input` (an array). `output_format` is supported.
+
+## Verify-Before-Claim Protocol — MANDATORY
+
+Before describing ANY character in ANY context (chat, prompt, code, review):
+1. **View** the actual ref image file (Read tool)
+2. **Quote** MEMORY.md or this file for gender + ethnicity (text source-of-truth)
+3. **Build** description from #1 visual + #2 textual
+4. **Never** describe from "memory" / "pattern" / "looks like" — if file not open, do not claim
+
+Before ANY image-gen API call:
+- Present a verification table (Char | Gender | Skin tone | Outfit | Ref path) and require user sign-off ONCE
+- After sign-off, do not re-ask — just run
+
+Wrong claims are treated as a process failure (the protocol failed) not a one-off correction.
+
+## Verified Gan West Character Descriptions
+
+These are the source-of-truth descriptions, derived from viewing each ref file. Use these verbatim in any Gan West prompt.
+
+| Char | Gender (MEMORY) | Description (verified from ref) |
+|------|----------------|--------------------------------|
+| **Cru** | BOY | light-skin, dark brown STRAIGHT medium-length hair, big BLUE eyes, light blue t-shirt, blue jeans, brown leather lace-up boots |
+| **Mason** | BOY | light-skin, short CURLY brown hair, brown eyes, slight smile, light grey t-shirt, blue jeans, blue/grey sneakers |
+| **Shai** | **BOY** (do NOT confuse with girls — visually androgynous) | light-skin, tousled CURLY brown hair, big open smile, white t-shirt, blue shorts, white sneakers |
+| **Desi** | BOY | light-skin, messy BLONDE wavy hair, brown eyes, sage green t-shirt, sage pants with little vehicle/car prints, dark grey shoes |
+| **Mia Alma** | GIRL | white-skin, REDDISH-BROWN hair in TWO pigtail buns (one each side), big blue-grey eyes, ORANGE pinafore overalls dress over yellow t-shirt, yellow shoes |
+| **Aila** | GIRL | **LIGHT/WHITE-skin (NOT brown, NOT dark)**, brown wavy hair pulled into a small bun on TOP of head, brown eyes, big open smile, **periwinkle/light-blue KNIT top with embroidered colorful flowers** across the chest (NOT a flowy floral dress), cream leggings with small floral print, light blue shoes |
+| **Chaya** | GIRL | light-skin, chin-length brown CURLY hair, ROUND eyeglasses, sweet small smile, ruffled pink-floral long-sleeve top, NAVY blue corduroy skirt with white lace trim, white socks, pink shoes |
+| **Mia Alexandra** | GIRL | **LIGHT-MEDIUM golden-tan skin (NOT Black, NOT African-American)**, PALE BLONDE tightly-curled hair in ONE bun on TOP of head, brown eyes, pinkish-purple long-sleeve ribbed top, black-and-white CHECKERED (gingham) pants, pink shoes |
+
+**Teachers (Gan West):**
+
+| Char | Description |
+|------|-------------|
+| **Morah Sarah** | ~50yo light-skin woman, WAVY shoulder-length BLONDE hair, big tortoiseshell ROUND eyeglasses, modest NAVY long-sleeve floor-length dress, warm grandmotherly smile |
+| **Teacher Elizabeth** | younger light-skin woman, LONG wavy DARK hair (no glasses), white t-shirt + dark blue jeans + white sneakers, warm friendly demeanor |
+| **Teacher Virginia** | light-medium skin (Latina-coded), long wavy DARK hair, dark-frame eyeglasses, dark green long-sleeve top + jeans, sweet warm smile |
+| **Teacher Jocelyn** | (view ref before describing — not yet audited in this session) |
+
 ## Character Reference Disambiguation — CRITICAL
 
 There are MULTIPLE characters whose names START with "Mia". NEVER confuse them.
