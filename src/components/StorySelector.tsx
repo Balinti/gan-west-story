@@ -1,4 +1,5 @@
 import type { Story } from "../data/story";
+import PitchBanner from "./PitchBanner";
 
 type Props = {
   stories: Story[];
@@ -10,6 +11,7 @@ export default function StorySelector({ stories, onSelect }: Props) {
     <div className="app-container">
       <div className="story-screen story-selector">
         <div className="selector-content">
+          <PitchBanner />
           <h1 className="selector-title">Choose a Story</h1>
           <div className="story-cards">
             {stories.map((story) => (

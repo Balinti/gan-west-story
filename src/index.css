@@ -722,3 +722,127 @@ body {
     max-height: 100%;
   }
 }
+
+/* ===== Pitch banner & contact modal (kidstory.online story selector) ===== */
+.pitch-banner {
+  width: 100%;
+  margin: 0 0 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ffefb6 0%, #ffd5e5 50%, #cae8ff 100%);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+.pitch-banner-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.pitch-text { flex: 1 1 auto; min-width: 220px; }
+.pitch-emoji { font-size: 1.5rem; margin-right: 0.4rem; }
+.pitch-title {
+  display: inline;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #2d2942;
+  margin: 0;
+}
+.pitch-sub {
+  margin: 0.4rem 0 0 0;
+  color: #4a456b;
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+.pitch-cta {
+  background: #6c63ff;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.3rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.1s, box-shadow 0.1s;
+  box-shadow: 0 4px 14px rgba(108, 99, 255, 0.35);
+}
+.pitch-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(108, 99, 255, 0.45); }
+.pitch-cta:active { transform: translateY(0); }
+.pitch-cta:disabled { opacity: 0.6; cursor: wait; }
+
+/* Modal */
+.pitch-modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 9999;
+  padding: 1rem;
+  animation: pitch-fade 0.18s ease-out;
+}
+@keyframes pitch-fade { from { opacity: 0; } to { opacity: 1; } }
+.pitch-modal {
+  background: white;
+  border-radius: 18px;
+  padding: 1.75rem;
+  max-width: 460px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.pitch-modal-close {
+  position: absolute; top: 0.75rem; right: 0.75rem;
+  background: transparent; border: none;
+  font-size: 1.4rem; cursor: pointer; padding: 0.3rem 0.6rem;
+  color: #888; border-radius: 50%;
+}
+.pitch-modal-close:hover { background: #f1f1f1; color: #333; }
+.pitch-form h3, .pitch-success h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.35rem;
+  color: #2d2942;
+}
+.pitch-form-sub {
+  margin: 0 0 1.25rem 0;
+  color: #6c6883;
+  font-size: 0.9rem;
+}
+.pitch-field {
+  display: flex; flex-direction: column;
+  margin-bottom: 1rem;
+}
+.pitch-field span {
+  font-weight: 600; font-size: 0.85rem;
+  color: #444; margin-bottom: 0.35rem;
+}
+.pitch-field input, .pitch-field textarea {
+  border: 2px solid #e3e3eb;
+  border-radius: 10px;
+  padding: 0.65rem 0.8rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s;
+  background: #fafafe;
+  color: #2d2942;
+}
+.pitch-field input:focus, .pitch-field textarea:focus { border-color: #6c63ff; background: white; }
+.pitch-field textarea { resize: vertical; min-height: 90px; }
+.pitch-cta-submit { width: 100%; margin-top: 0.5rem; padding: 0.85rem; }
+.pitch-error {
+  background: #ffe3e3; color: #b00020;
+  padding: 0.7rem 0.9rem; border-radius: 10px;
+  margin-bottom: 0.9rem; font-size: 0.88rem;
+}
+
+/* Success state */
+.pitch-success { text-align: center; padding: 0.5rem 0; }
+.pitch-success-icon { font-size: 3rem; margin-bottom: 0.75rem; }
+.pitch-success p { color: #555; margin: 0.6rem 0 1.4rem 0; line-height: 1.5; }
+
+@media (max-width: 480px) {
+  .pitch-banner-inner { flex-direction: column; align-items: flex-start; }
+  .pitch-cta { width: 100%; text-align: center; }
+}
