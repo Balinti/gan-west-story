@@ -1,16 +1,27 @@
 import { useState } from "react";
 
 const WEBHOOK_URL = "https://n8n.srv936332.hstgr.cloud/webhook/kidstory";
+const DISMISS_KEY = "kidstory_pitch_dismissed_v1";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
 export default function PitchBanner() {
+  const [dismissed, setDismissed] = useState(
+    () => typeof localStorage !== "undefined" && localStorage.getItem(DISMISS_KEY) === "1"
+  );
   const [open, setOpen] = useState(false);
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [idea, setIdea] = useState("");
+
+  function dismissBanner() {
+    setDismissed(true);
+    try { localStorage.setItem(DISMISS_KEY, "1"); } catch {}
+  }
+
+  if (dismissed && !open) return null;
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -49,14 +60,18 @@ export default function PitchBanner() {
   return (
     <>
       <div className="pitch-banner">
+        <button
+          className="pitch-banner-close"
+          onClick={dismissBanner}
+          aria-label="Dismiss"
+          type="button"
+        >
+          ✕
+        </button>
         <div className="pitch-banner-inner">
           <div className="pitch-text">
             <span className="pitch-emoji">✨</span>
-            <h2 className="pitch-title">Want a story with YOUR family?</h2>
-            <p className="pitch-sub">
-              Custom stories with your kids, friends, and favorite places —
-              tell us your idea!
-            </p>
+            <span className="pitch-title">Want a story with YOUR family?</span>
           </div>
           <button
             className="pitch-cta"
