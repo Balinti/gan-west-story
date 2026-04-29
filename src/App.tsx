@@ -3,6 +3,7 @@ import { stories, storiesById, hiddenStories } from "./data/stories";
 import StoryScreen from "./components/StoryScreen";
 import StorySelector from "./components/StorySelector";
 import IntroVideo from "./components/IntroVideo";
+import PitchBanner from "./components/PitchBanner";
 import { trackStoryStarted, trackStoryCompleted, trackSceneView } from "./utils/analytics";
 
 function App() {
@@ -111,6 +112,7 @@ function App() {
   if (!started) {
     return (
       <div className="app-container">
+        <PitchBanner />
         <div className="story-screen start-screen">
           <img
             src={story.coverImage}
