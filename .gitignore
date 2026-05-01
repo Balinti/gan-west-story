@@ -27,3 +27,11 @@ dist-ssr
 .env
 .env.*
 !.env.example
+
+# Pipeline temp JSON artifacts
+scripts/*-results.json
+scripts/*-retry.json
+scripts/*-test.json
+scripts/*-fix.json
+scripts/garden-bugs-regen.json
+scripts/migrate-*.py
