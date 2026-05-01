@@ -3,27 +3,27 @@ import type { Story } from "../story";
 const base = import.meta.env.BASE_URL;
 
 export const zoo2SceneImages: Record<string, string> = {
-  "zoo2-opening": `${base}scenes/zoo2-opening.png`,
-  "zoo2-bus": `${base}scenes/zoo2-bus.png`,
-  "zoo2-gates": `${base}scenes/zoo2-gates.png`,
-  "zoo2-choice1": `${base}scenes/zoo2-choice1.png`,
-  "zoo2-safari": `${base}scenes/zoo2-safari.png`,
-  "zoo2-jungle": `${base}scenes/zoo2-jungle.png`,
-  "zoo2-snack": `${base}scenes/zoo2-snack.png`,
-  "zoo2-choice2": `${base}scenes/zoo2-choice2.png`,
-  "zoo2-ocean": `${base}scenes/zoo2-ocean.png`,
-  "zoo2-reptiles": `${base}scenes/zoo2-reptiles.png`,
-  "zoo2-scavenger-done": `${base}scenes/zoo2-scavenger-done.png`,
-  "zoo2-gift-shop": `${base}scenes/zoo2-gift-shop.png`,
-  "zoo2-bus-home": `${base}scenes/zoo2-bus-home.png`,
-  "zoo2-end": `${base}scenes/zoo2-end.png`,
+  "zoo2-opening": `${base}stories/zoo2/scenes/zoo2-opening.png`,
+  "zoo2-bus": `${base}stories/zoo2/scenes/zoo2-bus.png`,
+  "zoo2-gates": `${base}stories/zoo2/scenes/zoo2-gates.png`,
+  "zoo2-choice1": `${base}stories/zoo2/scenes/zoo2-choice1.png`,
+  "zoo2-safari": `${base}stories/zoo2/scenes/zoo2-safari.png`,
+  "zoo2-jungle": `${base}stories/zoo2/scenes/zoo2-jungle.png`,
+  "zoo2-snack": `${base}stories/zoo2/scenes/zoo2-snack.png`,
+  "zoo2-choice2": `${base}stories/zoo2/scenes/zoo2-choice2.png`,
+  "zoo2-ocean": `${base}stories/zoo2/scenes/zoo2-ocean.png`,
+  "zoo2-reptiles": `${base}stories/zoo2/scenes/zoo2-reptiles.png`,
+  "zoo2-scavenger-done": `${base}stories/zoo2/scenes/zoo2-scavenger-done.png`,
+  "zoo2-gift-shop": `${base}stories/zoo2/scenes/zoo2-gift-shop.png`,
+  "zoo2-bus-home": `${base}stories/zoo2/scenes/zoo2-bus-home.png`,
+  "zoo2-end": `${base}stories/zoo2/scenes/zoo2-end.png`,
 };
 
 export const zoo2: Story = {
   id: "zoo2",
   title: "Gan West Goes to the Zoo!",
   subtitle: "A Scavenger Hunt Adventure",
-  coverImage: `${base}scenes/zoo2-opening.png`,
+  coverImage: `${base}stories/zoo2/scenes/zoo2-opening.png`,
   firstSceneId: "zoo2-opening",
   endSceneId: "zoo2-end",
   audioManifest: {
@@ -161,8 +161,8 @@ export const zoo2: Story = {
       characters: ["Cru", "Mason", "Mia Alma", "Aila", "Shai", "Chaya", "Desi", "Mia Alexandra"],
       background: "zoo-fork-path",
       choices: [
-        { label: "Safari!", nextScene: "zoo2-safari", image: "choices/zoo2-choice-safari.jpg" },
-        { label: "Jungle!", nextScene: "zoo2-jungle", image: "choices/zoo2-choice-jungle.jpg" },
+        { label: "Safari!", nextScene: "zoo2-safari", image: "stories/zoo2/images/zoo2-choice-safari.jpg" },
+        { label: "Jungle!", nextScene: "zoo2-jungle", image: "stories/zoo2/images/zoo2-choice-jungle.jpg" },
       ],
     },
     "zoo2-safari": {
@@ -192,8 +192,8 @@ export const zoo2: Story = {
       characters: ["Cru", "Mason", "Mia Alma", "Aila", "Shai", "Chaya", "Desi", "Mia Alexandra"],
       background: "zoo-fork-path",
       choices: [
-        { label: "Ocean World!", nextScene: "zoo2-ocean", image: "choices/zoo2-choice-ocean.jpg" },
-        { label: "Reptile House!", nextScene: "zoo2-reptiles", image: "choices/zoo2-choice-reptiles.jpg" },
+        { label: "Ocean World!", nextScene: "zoo2-ocean", image: "stories/zoo2/images/zoo2-choice-ocean.jpg" },
+        { label: "Reptile House!", nextScene: "zoo2-reptiles", image: "stories/zoo2/images/zoo2-choice-reptiles.jpg" },
       ],
     },
     "zoo2-ocean": {

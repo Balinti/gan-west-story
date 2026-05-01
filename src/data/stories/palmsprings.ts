@@ -3,29 +3,29 @@ import type { Story } from "../story";
 const base = import.meta.env.BASE_URL;
 
 export const palmspringsSceneImages: Record<string, string> = {
-  "palmsprings-opening": `${base}scenes/palmsprings-opening.png`,
-  "palmsprings-drive": `${base}scenes/palmsprings-drive.png`,
-  "palmsprings-arrival": `${base}scenes/palmsprings-arrival.png`,
-  "palmsprings-rooms": `${base}scenes/palmsprings-rooms.png`,
-  "palmsprings-first-choice": `${base}scenes/palmsprings-first-choice.png`,
-  "palmsprings-pool": `${base}scenes/palmsprings-pool.png`,
-  "palmsprings-desert": `${base}scenes/palmsprings-desert.png`,
-  "palmsprings-bbq": `${base}scenes/palmsprings-bbq.png`,
-  "palmsprings-stargazing": `${base}scenes/palmsprings-stargazing.png`,
-  "palmsprings-morning": `${base}scenes/palmsprings-morning.png`,
-  "palmsprings-second-choice": `${base}scenes/palmsprings-second-choice.png`,
-  "palmsprings-splashpark": `${base}scenes/palmsprings-splashpark.png`,
-  "palmsprings-icecream": `${base}scenes/palmsprings-icecream.png`,
-  "palmsprings-sunset": `${base}scenes/palmsprings-sunset.png`,
-  "palmsprings-goodbye": `${base}scenes/palmsprings-goodbye.png`,
-  "palmsprings-end": `${base}scenes/palmsprings-end.png`,
+  "palmsprings-opening": `${base}stories/palmsprings/scenes/palmsprings-opening.png`,
+  "palmsprings-drive": `${base}stories/palmsprings/scenes/palmsprings-drive.png`,
+  "palmsprings-arrival": `${base}stories/palmsprings/scenes/palmsprings-arrival.png`,
+  "palmsprings-rooms": `${base}stories/palmsprings/scenes/palmsprings-rooms.png`,
+  "palmsprings-first-choice": `${base}stories/palmsprings/scenes/palmsprings-first-choice.png`,
+  "palmsprings-pool": `${base}stories/palmsprings/scenes/palmsprings-pool.png`,
+  "palmsprings-desert": `${base}stories/palmsprings/scenes/palmsprings-desert.png`,
+  "palmsprings-bbq": `${base}stories/palmsprings/scenes/palmsprings-bbq.png`,
+  "palmsprings-stargazing": `${base}stories/palmsprings/scenes/palmsprings-stargazing.png`,
+  "palmsprings-morning": `${base}stories/palmsprings/scenes/palmsprings-morning.png`,
+  "palmsprings-second-choice": `${base}stories/palmsprings/scenes/palmsprings-second-choice.png`,
+  "palmsprings-splashpark": `${base}stories/palmsprings/scenes/palmsprings-splashpark.png`,
+  "palmsprings-icecream": `${base}stories/palmsprings/scenes/palmsprings-icecream.png`,
+  "palmsprings-sunset": `${base}stories/palmsprings/scenes/palmsprings-sunset.png`,
+  "palmsprings-goodbye": `${base}stories/palmsprings/scenes/palmsprings-goodbye.png`,
+  "palmsprings-end": `${base}stories/palmsprings/scenes/palmsprings-end.png`,
 };
 
 export const palmsprings: Story = {
   id: "palmsprings",
   title: "Palm Springs Villa!",
   subtitle: "L.A. Friends",
-  coverImage: `${base}scenes/palmsprings-opening.png`,
+  coverImage: `${base}stories/palmsprings/scenes/palmsprings-opening.png`,
   firstSceneId: "palmsprings-opening",
   endSceneId: "palmsprings-end",
   audioManifest: {
@@ -182,8 +182,8 @@ export const palmsprings: Story = {
       characters: ["Mia", "Givi", "Sophia", "Alexander"],
       background: "villa-afternoon",
       choices: [
-        { label: "Pool Time!", nextScene: "palmsprings-pool", image: "choices/palmsprings-pool.jpg" },
-        { label: "Desert Walk!", nextScene: "palmsprings-desert", image: "choices/palmsprings-desert.jpg" },
+        { label: "Pool Time!", nextScene: "palmsprings-pool", image: "stories/palmsprings/images/palmsprings-pool.jpg" },
+        { label: "Desert Walk!", nextScene: "palmsprings-desert", image: "stories/palmsprings/images/palmsprings-desert.jpg" },
       ],
     },
     "palmsprings-pool": {
@@ -227,8 +227,8 @@ export const palmsprings: Story = {
       characters: ["Mia", "Givi", "Sophia", "Alexander"],
       background: "villa-morning-outside",
       choices: [
-        { label: "Splash Park!", nextScene: "palmsprings-splashpark", image: "choices/palmsprings-splashpark.jpg" },
-        { label: "Ice Cream Run!", nextScene: "palmsprings-icecream", image: "choices/palmsprings-icecream.jpg" },
+        { label: "Splash Park!", nextScene: "palmsprings-splashpark", image: "stories/palmsprings/images/palmsprings-splashpark.jpg" },
+        { label: "Ice Cream Run!", nextScene: "palmsprings-icecream", image: "stories/palmsprings/images/palmsprings-icecream.jpg" },
       ],
     },
     "palmsprings-splashpark": {

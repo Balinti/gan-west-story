@@ -1,0 +1,101 @@
+[
+  {
+    "name": "garden-bugs-magnifying",
+    "aspect": "9:16",
+    "format": "png",
+    "refs": [
+      "https://kidstory.online/characters/Morah_Sarah.jpg",
+      "https://kidstory.online/characters/Cru.jpg",
+      "https://kidstory.online/characters/Mason.jpg",
+      "https://kidstory.online/characters/Shai.jpg",
+      "https://kidstory.online/characters/Desi.jpg",
+      "https://kidstory.online/characters/Mia_Alma.jpg",
+      "https://kidstory.online/characters/Aila.jpg",
+      "https://kidstory.online/characters/Chaya.jpg"
+    ],
+    "prompt": "hd non pixeled, no checkerboard! Warm, sunny 3D Pixar-style animated children's-book illustration. Outdoor preschool garden scene. EXACTLY ONE adult teacher and 7 small children visible. The teacher Morah Sarah is a ~50-year-old woman with shoulder-length wavy BLONDE hair, ROUND tortoiseshell glasses, modest NAVY long-sleeve floor-length dress. She stands holding a colorful wooden tray of small toy magnifying glasses, smiling warmly. The 7 small children stand in front of her, looking up at the tray with curious happy faces, some pointing. The 7: Cru (light-skin BOY, dark STRAIGHT brown hair, blue eyes, light blue shirt), Mason (light-skin BOY, short CURLY brown hair, grey shirt), Shai (light-skin BOY, tousled curly brown hair, white shirt + blue shorts), Desi (light-skin BOY, messy BLONDE hair, sage green shirt), Mia Alma (white-skin GIRL, reddish-brown hair in TWO buns, ORANGE pinafore), Aila (light-skin GIRL, brown hair in small top bun, lavender-blue knit top with embroidered flowers), Chaya (light-skin GIRL with ROUND glasses, brown curly hair, pink ruffled top, navy skirt). Garden setting with flowers and green plants. Warm friendly classroom-outdoor atmosphere. ONLY these 8 characters. Solid normal scene background \u2014 no grid, no checkerboard, no transparency pattern. Portrait orientation 9:16."
+  },
+  {
+    "name": "garden-bugs-first-choice",
+    "aspect": "9:16",
+    "format": "png",
+    "refs": [
+      "https://kidstory.online/characters/Cru.jpg",
+      "https://kidstory.online/characters/Shai.jpg",
+      "https://kidstory.online/characters/Mia_Alexandra.jpg",
+      "https://kidstory.online/characters/Mia_Alma.jpg"
+    ],
+    "prompt": "hd non pixeled, no checkerboard! Warm 3D Pixar-style animated children's-book scene. Gan West school garden. EXACTLY 4 toddlers (28-month-old, very small, chubby cheeks, big heads), standing in the middle of the garden looking back and forth between two things: on their LEFT a sparkly spider web glittering between two flower stems, on their RIGHT a big mossy log on the ground. The 4 children with curious expressions, looking torn between the two: Cru (light-skin BOY, dark STRAIGHT brown medium-length hair, big BLUE eyes, light blue t-shirt, blue jeans, brown leather boots), Shai (light-skin BOY, tousled CURLY brown hair, big smile, WHITE t-shirt with blue shorts), Mia Alexandra (LIGHT-MEDIUM GOLDEN-TAN-skin GIRL \u2014 NOT Black, NOT dark \u2014 PALE BLONDE tightly-curled hair in a single bun ON TOP, brown eyes, pinkish-purple long-sleeve ribbed top, black-and-white CHECKERED gingham pants), Mia Alma (WHITE-skin GIRL, reddish-brown hair in TWO pigtail buns one each side, blue-grey eyes, ORANGE pinafore overalls dress over yellow shirt). Background: lush garden, both the web and the mossy log clearly visible at opposite sides of frame. ONLY these 4 children \u2014 NO other people. Portrait orientation, 9:16. IMPORTANT BACKGROUND RULE: The character reference images you receive have TRANSPARENT backgrounds, shown to you as a grey/dark checkerboard pattern. This checkerboard is NOT visual content \u2014 it is just the transparency indicator. DO NOT replicate this checkerboard, grid, chess pattern, or pixelated tile pattern anywhere in the output image. The output must have a fully-rendered, normal scene background with solid colors and natural detail (garden flora, wood, grass, sky) \u2014 absolutely no checker/grid/tile pattern allowed."
+  },
+  {
+    "name": "garden-bugs-spider",
+    "aspect": "9:16",
+    "format": "png",
+    "refs": [
+      "https://kidstory.online/characters/Aila.jpg"
+    ],
+    "prompt": "hd non pixeled, no checkerboard! Warm sunny 3D Pixar-style animated children's-book scene. Gan West school garden close-up. EXACTLY ONE 28-month-old toddler girl, very small, chubby cheeks, big head \u2014 Aila. She has LIGHT skin, brown wavy hair pulled into a small bun on TOP of head, brown eyes, wearing a periwinkle/light-blue KNIT top with embroidered colorful flowers across the chest, cream leggings with a small floral print, light blue shoes. She is kneeling carefully on the dirt with both hands on her thighs, looking with WIDE-EYED wonder at a sparkling spider web stretched between two pretty flower stems (cosmos and zinnias). A tiny black spider is visible in the center of the web. The web sparkles in sunlight. Soft garden bokeh background. ONLY Aila \u2014 absolutely NO other people, NO other children, NO adults. Portrait orientation, 9:16. IMPORTANT BACKGROUND RULE: The character reference images you receive have TRANSPARENT backgrounds, shown to you as a grey/dark checkerboard pattern. This checkerboard is NOT visual content \u2014 it is just the transparency indicator. DO NOT replicate this checkerboard, grid, chess pattern, or pixelated tile pattern anywhere in the output image. The output must have a fully-rendered, normal scene background with solid colors and natural detail (garden flora, wood, grass, sky) \u2014 absolutely no checker/grid/tile pattern allowed."
+  },
+  {
+    "name": "garden-bugs-butterfly-wait",
+    "aspect": "9:16",
+    "format": "png",
+    "refs": [
+      "https://kidstory.online/characters/Teacher_Virginia.jpg",
+      "https://kidstory.online/characters/Cru.jpg",
+      "https://kidstory.online/characters/Mason.jpg",
+      "https://kidstory.online/characters/Shai.jpg",
+      "https://kidstory.online/characters/Desi.jpg",
+      "https://kidstory.online/characters/Mia_Alma.jpg",
+      "https://kidstory.online/characters/Aila.jpg",
+      "https://kidstory.online/characters/Chaya.jpg",
+      "https://kidstory.online/characters/Mia_Alexandra.jpg"
+    ],
+    "prompt": "hd non pixeled, no checkerboard! Warm 3D Pixar-style animated children's-book scene. Gan West school garden, near a low branch where a small green teardrop-shaped cocoon hangs and is shaking/wiggling. EXACTLY ONE adult and 8 toddlers, all standing very still in hushed wonder, holding their breath. Teacher Virginia, a light-medium-skin woman (Latina-coded) with long wavy DARK hair, dark-frame eyeglasses, wearing a DARK GREEN long-sleeve top and blue jeans, her finger pressed to her lips (\"shh\"). The 8 toddlers (28-month-old, very small, big heads): Cru (light-skin BOY, dark STRAIGHT brown hair, BLUE eyes, light blue t-shirt), Mason (light-skin BOY, short CURLY brown hair, grey t-shirt), Shai (light-skin BOY, tousled CURLY brown hair, white t-shirt + blue shorts), Desi (light-skin BOY, messy BLONDE hair, sage shirt), Mia Alma (WHITE-skin GIRL, reddish-brown TWO pigtail buns, ORANGE overalls), Aila (LIGHT-skin GIRL, brown bun on top, periwinkle embroidered floral knit top), Chaya (light-skin GIRL with ROUND glasses, brown curly hair, ruffled pink floral top + navy skirt), Mia Alexandra (GOLDEN-TAN-skin GIRL \u2014 NOT Black \u2014 pale BLONDE bun on top, purple ribbed top + checkered pants). All children clearly visible, eyes wide. ONLY these 9 characters. Portrait orientation, 9:16. IMPORTANT BACKGROUND RULE: The character reference images you receive have TRANSPARENT backgrounds, shown to you as a grey/dark checkerboard pattern. This checkerboard is NOT visual content \u2014 it is just the transparency indicator. DO NOT replicate this checkerboard, grid, chess pattern, or pixelated tile pattern anywhere in the output image. The output must have a fully-rendered, normal scene background with solid colors and natural detail (garden flora, wood, grass, sky) \u2014 absolutely no checker/grid/tile pattern allowed."
+  },
+  {
+    "name": "garden-bugs-second-choice",
+    "aspect": "9:16",
+    "format": "png",
+    "refs": [
+      "https://kidstory.online/characters/Cru.jpg",
+      "https://kidstory.online/characters/Shai.jpg",
+      "https://kidstory.online/characters/Mason.jpg",
+      "https://kidstory.online/characters/Mia_Alexandra.jpg"
+    ],
+    "prompt": "hd non pixeled, no checkerboard! Warm 3D Pixar-style animated children's-book scene. Gan West garden. EXACTLY 4 toddlers (28-month-old, very small, chubby cheeks, big heads) looking up and pointing at a beautiful BRIGHT ORANGE monarch butterfly fluttering above them. The 4 children: Cru (light-skin BOY, dark STRAIGHT brown medium hair, big BLUE eyes, light blue t-shirt, blue jeans, brown boots), Shai (light-skin BOY, tousled CURLY brown hair, big smile, WHITE t-shirt with blue shorts), Mason (light-skin BOY, short CURLY brown hair, brown eyes, light grey t-shirt, blue jeans), Mia Alexandra (LIGHT-MEDIUM GOLDEN-TAN-skin GIRL \u2014 NOT Black \u2014 pale BLONDE tightly-curled hair in single bun on TOP, brown eyes, pinkish-purple long-sleeve ribbed top, black-and-white CHECKERED gingham pants). Their faces tilted up, expressions thoughtful and excited as if discussing what to do next. Garden setting with butterflies, flowers. ONLY these 4 children \u2014 NO other people. Portrait orientation, 9:16. IMPORTANT BACKGROUND RULE: The character reference images you receive have TRANSPARENT backgrounds, shown to you as a grey/dark checkerboard pattern. This checkerboard is NOT visual content \u2014 it is just the transparency indicator. DO NOT replicate this checkerboard, grid, chess pattern, or pixelated tile pattern anywhere in the output image. The output must have a fully-rendered, normal scene background with solid colors and natural detail (garden flora, wood, grass, sky) \u2014 absolutely no checker/grid/tile pattern allowed."
+  },
+  {
+    "name": "garden-bugs-counting",
+    "aspect": "9:16",
+    "format": "png",
+    "refs": [
+      "https://kidstory.online/characters/Cru.jpg",
+      "https://kidstory.online/characters/Mason.jpg",
+      "https://kidstory.online/characters/Shai.jpg",
+      "https://kidstory.online/characters/Desi.jpg",
+      "https://kidstory.online/characters/Mia_Alma.jpg",
+      "https://kidstory.online/characters/Aila.jpg",
+      "https://kidstory.online/characters/Chaya.jpg",
+      "https://kidstory.online/characters/Mia_Alexandra.jpg"
+    ],
+    "prompt": "hd non pixeled, no checkerboard! Warm sunny 3D Pixar-style animated children's-book scene. Gan West school garden, busy with discovery. EXACTLY 8 toddlers (28-month-old, very small, big heads, chubby cheeks) scattered playfully through the garden, each engaged with finding bugs. Chaya holds up ONE finger, calling out 'One!' near a caterpillar. Shai points and shouts 'Two!' near a spider web. Mia Alma kneels excitedly by a wiggling pink worm. Others searching among flowers and plants. The 8: Cru (light-skin BOY, dark STRAIGHT brown hair, BLUE eyes, light blue t-shirt, blue jeans), Mason (light-skin BOY, short CURLY brown hair, grey t-shirt), Shai (light-skin BOY, tousled CURLY brown hair, WHITE t-shirt with blue shorts), Desi (light-skin BOY, messy BLONDE hair, sage green t-shirt, vehicle-print pants), Mia Alma (WHITE-skin GIRL, reddish-brown TWO pigtail buns, ORANGE overalls dress over yellow shirt), Aila (LIGHT-skin GIRL, brown bun on top, periwinkle embroidered floral knit top, cream floral leggings), Chaya (light-skin GIRL with ROUND glasses, brown curly hair, ruffled pink floral top + navy skirt), Mia Alexandra (LIGHT-MEDIUM GOLDEN-TAN-skin GIRL \u2014 NOT Black \u2014 pale BLONDE bun on top, purple ribbed top + black-and-white checkered pants). Lush garden background, sunflowers, butterflies. ONLY these 8 \u2014 NO other people. Portrait orientation, 9:16. IMPORTANT BACKGROUND RULE: The character reference images you receive have TRANSPARENT backgrounds, shown to you as a grey/dark checkerboard pattern. This checkerboard is NOT visual content \u2014 it is just the transparency indicator. DO NOT replicate this checkerboard, grid, chess pattern, or pixelated tile pattern anywhere in the output image. The output must have a fully-rendered, normal scene background with solid colors and natural detail (garden flora, wood, grass, sky) \u2014 absolutely no checker/grid/tile pattern allowed."
+  },
+  {
+    "name": "garden-bugs-snack",
+    "aspect": "9:16",
+    "format": "png",
+    "refs": [
+      "https://kidstory.online/characters/Morah_Sarah.jpg",
+      "https://kidstory.online/characters/Cru.jpg",
+      "https://kidstory.online/characters/Mason.jpg",
+      "https://kidstory.online/characters/Shai.jpg",
+      "https://kidstory.online/characters/Desi.jpg",
+      "https://kidstory.online/characters/Mia_Alma.jpg",
+      "https://kidstory.online/characters/Aila.jpg",
+      "https://kidstory.online/characters/Chaya.jpg",
+      "https://kidstory.online/characters/Mia_Alexandra.jpg"
+    ],
+    "prompt": "hd non pixeled, no checkerboard! Warm 3D Pixar-style animated children's-book scene. Gan West school garden, picnic blanket on grass. EXACTLY ONE adult and 8 toddlers seated around a colorful blanket. Morah Sarah (~50yo light-skin woman, WAVY shoulder-length BLONDE hair, ROUND tortoiseshell glasses, NAVY long-sleeve floor-length dress) holding a wooden tray with cute bug-shaped snacks: pretzel-stick spiders with raisin bodies, gummy worms, and round chocolate-cookie rolly pollies. The 8 toddlers laughing happily and reaching for snacks. The 8: Cru (light-skin BOY, dark STRAIGHT brown hair, BLUE eyes, light blue t-shirt), Mason (light-skin BOY, short CURLY brown hair, grey t-shirt), Shai (light-skin BOY, tousled CURLY brown hair, white t-shirt + blue shorts), Desi (light-skin BOY, messy BLONDE hair, sage shirt), Mia Alma (WHITE-skin GIRL, reddish-brown TWO pigtail buns, ORANGE overalls), Aila (LIGHT-skin GIRL, brown bun on top, periwinkle embroidered floral knit top), Chaya (light-skin GIRL with ROUND glasses, brown curly hair, ruffled pink floral top + navy skirt), Mia Alexandra (GOLDEN-TAN-skin GIRL \u2014 NOT Black \u2014 pale BLONDE bun on top, purple ribbed top + checkered pants). Sunlit garden. ONLY these 9 characters. Portrait orientation, 9:16. IMPORTANT BACKGROUND RULE: The character reference images you receive have TRANSPARENT backgrounds, shown to you as a grey/dark checkerboard pattern. This checkerboard is NOT visual content \u2014 it is just the transparency indicator. DO NOT replicate this checkerboard, grid, chess pattern, or pixelated tile pattern anywhere in the output image. The output must have a fully-rendered, normal scene background with solid colors and natural detail (garden flora, wood, grass, sky) \u2014 absolutely no checker/grid/tile pattern allowed."
+  }
+]

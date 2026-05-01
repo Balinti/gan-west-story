@@ -3,30 +3,30 @@ import type { Story } from "../story";
 const base = import.meta.env.BASE_URL;
 
 export const zooSceneImages: Record<string, string> = {
-  "zoo-opening": `${base}scenes/zoo-opening.png`,
-  "zoo-bus": `${base}scenes/zoo-bus.png`,
-  "zoo-gates": `${base}scenes/zoo-gates.png`,
-  "zoo-first-choice": `${base}scenes/zoo-first-choice.png`,
-  "zoo-elephants": `${base}scenes/zoo-elephants.png`,
-  "zoo-monkeys": `${base}scenes/zoo-monkeys.png`,
-  "zoo-snack": `${base}scenes/zoo-snack.png`,
-  "zoo-animal-choice": `${base}scenes/zoo-animal-choice.png`,
-  "zoo-penguins": `${base}scenes/zoo-penguins.png`,
-  "zoo-giraffes": `${base}scenes/zoo-giraffes.png`,
-  "zoo-lost": `${base}scenes/zoo-lost.png`,
-  "zoo-search-map": `${base}scenes/zoo-search-map.png`,
-  "zoo-search-zookeeper": `${base}scenes/zoo-search-zookeeper.png`,
-  "zoo-found": `${base}scenes/zoo-found.png`,
-  "zoo-gift-shop": `${base}scenes/zoo-gift-shop.png`,
-  "zoo-bus-home": `${base}scenes/zoo-bus-home.png`,
-  "zoo-end": `${base}scenes/zoo-end.png`,
+  "zoo-opening": `${base}stories/zoo/scenes/zoo-opening.png`,
+  "zoo-bus": `${base}stories/zoo/scenes/zoo-bus.png`,
+  "zoo-gates": `${base}stories/zoo/scenes/zoo-gates.png`,
+  "zoo-first-choice": `${base}stories/zoo/scenes/zoo-first-choice.png`,
+  "zoo-elephants": `${base}stories/zoo/scenes/zoo-elephants.png`,
+  "zoo-monkeys": `${base}stories/zoo/scenes/zoo-monkeys.png`,
+  "zoo-snack": `${base}stories/zoo/scenes/zoo-snack.png`,
+  "zoo-animal-choice": `${base}stories/zoo/scenes/zoo-animal-choice.png`,
+  "zoo-penguins": `${base}stories/zoo/scenes/zoo-penguins.png`,
+  "zoo-giraffes": `${base}stories/zoo/scenes/zoo-giraffes.png`,
+  "zoo-lost": `${base}stories/zoo/scenes/zoo-lost.png`,
+  "zoo-search-map": `${base}stories/zoo/scenes/zoo-search-map.png`,
+  "zoo-search-zookeeper": `${base}stories/zoo/scenes/zoo-search-zookeeper.png`,
+  "zoo-found": `${base}stories/zoo/scenes/zoo-found.png`,
+  "zoo-gift-shop": `${base}stories/zoo/scenes/zoo-gift-shop.png`,
+  "zoo-bus-home": `${base}stories/zoo/scenes/zoo-bus-home.png`,
+  "zoo-end": `${base}stories/zoo/scenes/zoo-end.png`,
 };
 
 export const zoo: Story = {
   id: "zoo",
   title: "Gan West Goes to the Zoo!",
   subtitle: "A Field Trip Adventure",
-  coverImage: `${base}scenes/zoo-opening.png`,
+  coverImage: `${base}stories/zoo/scenes/zoo-opening.png`,
   firstSceneId: "zoo-opening",
   endSceneId: "zoo-end",
   audioManifest: {
@@ -171,8 +171,8 @@ export const zoo: Story = {
       characters: ["sarah"],
       background: "zoo-entrance",
       choices: [
-        { label: "Elephants!", nextScene: "zoo-elephants", image: "choices/zoo-elephants.jpg" },
-        { label: "Monkeys!", nextScene: "zoo-monkeys", image: "choices/zoo-monkeys.jpg" },
+        { label: "Elephants!", nextScene: "zoo-elephants", image: "stories/zoo/images/zoo-elephants.jpg" },
+        { label: "Monkeys!", nextScene: "zoo-monkeys", image: "stories/zoo/images/zoo-monkeys.jpg" },
       ],
     },
     "zoo-elephants": {
@@ -202,8 +202,8 @@ export const zoo: Story = {
       characters: ["virginia"],
       background: "zoo-path",
       choices: [
-        { label: "Penguins!", nextScene: "zoo-penguins", image: "choices/zoo-penguins.jpg" },
-        { label: "Giraffes!", nextScene: "zoo-giraffes", image: "choices/zoo-giraffes.jpg" },
+        { label: "Penguins!", nextScene: "zoo-penguins", image: "stories/zoo/images/zoo-penguins.jpg" },
+        { label: "Giraffes!", nextScene: "zoo-giraffes", image: "stories/zoo/images/zoo-giraffes.jpg" },
       ],
     },
     "zoo-penguins": {
@@ -226,8 +226,8 @@ export const zoo: Story = {
       characters: ["virginia", "sarah"],
       background: "zoo-flamingos",
       choices: [
-        { label: "Check the Map!", nextScene: "zoo-search-map", image: "choices/zoo-map.jpg" },
-        { label: "Ask a Zookeeper!", nextScene: "zoo-search-zookeeper", image: "choices/zoo-zookeeper.jpg" },
+        { label: "Check the Map!", nextScene: "zoo-search-map", image: "stories/zoo/images/zoo-map.jpg" },
+        { label: "Ask a Zookeeper!", nextScene: "zoo-search-zookeeper", image: "stories/zoo/images/zoo-zookeeper.jpg" },
       ],
     },
     "zoo-search-map": {

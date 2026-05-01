@@ -1,5 +1,29 @@
 # Project Instructions
 
+## File Structure — MANDATORY (post-2026-05-01 reorg)
+
+Per-story isolation. Do NOT use the legacy flat folders (`public/scenes/`, `public/audio/`, `public/choices/`) — they no longer exist.
+
+```
+public/
+├── templates/                              ← character refs grouped by family
+│   ├── la-friends/   (Mia.jpg, Sophia.png, Givi.png, Alexander.png, Edoe.png, etc.)
+│   ├── bluey/        (Bluey.png, Bingo.png, Bandit.png, Chilli.png, etc.)
+│   └── gan-west/     (Cru.jpg, Mason.jpg, Mia_Alma.jpg, Mia_Alexandra.jpg, Morah_Sarah.jpg, etc.)
+└── stories/                                 ← per-story folders
+    └── <story-id>/                          ← e.g. palmsprings, garden-bugs, gan-west
+        ├── scenes/   (16 scene PNGs, story-prefix kept in filenames)
+        ├── images/   (4 choice JPGs + cover image references)
+        └── audio/    (~65 narration MP3s)
+```
+
+**Rules:**
+- Character ref URLs use `/templates/<family>/<name>` (e.g. `https://kidstory.online/templates/gan-west/Cru.jpg`)
+- Scene URLs use `${base}stories/<story-id>/scenes/<filename>.png`
+- Choice URLs use `stories/<story-id>/images/<filename>.jpg`
+- Audio: hook resolves `${base}stories/<story-id>/audio/<filename>.mp3` automatically from story.id
+- `generate-images.py` and `generate-audio.py` REQUIRE `--story <id>` flag (writes to correct subdir)
+
 ## Image Generation Model — MANDATORY
 
 **Use `nano-banana-2` ONLY.** Do NOT switch to `gpt-image-2-image-to-image` — it produces persistent transparency-checkerboard artifacts in backgrounds when given multiple character refs (their grey/transparent backgrounds leak into the output as grid patterns). Nano-banana-2 handles multi-ref prompts cleanly.

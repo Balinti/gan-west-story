@@ -39,14 +39,21 @@ if not API_KEY:
     sys.exit(1)
 VOICE_ID = "cR39HTrtXbjvEP4CNYFx"  # Daphne
 MODEL = "eleven_v3"
-AUDIO_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "public", "audio")
+PUBLIC_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "public")
 
 
-def generate_one(entry):
+def get_audio_dir(story_id):
+    """Return audio dir for the given story id under public/stories/<id>/audio/."""
+    d = os.path.join(PUBLIC_DIR, "stories", story_id, "audio")
+    os.makedirs(d, exist_ok=True)
+    return d
+
+
+def generate_one(entry, audio_dir):
     """Generate a single MP3 via ElevenLabs. Returns (filename, success, error)."""
     filename = entry["file"]
     text = entry["text"]
-    out_path = os.path.join(AUDIO_DIR, filename)
+    out_path = os.path.join(audio_dir, filename)
 
     payload = json.dumps({
         "text": text,
@@ -96,10 +103,32 @@ def generate_one(entry):
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python3 scripts/generate-audio.py audio-lines.json")
+        print("Usage: python3 scripts/generate-audio.py audio-lines.json --story <story-id>")
         sys.exit(1)
 
-    with open(sys.argv[1]) as f:
+    # Parse --story arg
+    story_id = None
+    json_path = None
+    args = sys.argv[1:]
+    i = 0
+    while i < len(args):
+        if args[i] == "--story" and i + 1 < len(args):
+            story_id = args[i + 1]
+            i += 2
+        else:
+            json_path = args[i]
+            i += 1
+    if not json_path:
+        print("ERROR: missing JSON file argument")
+        sys.exit(1)
+    if not story_id:
+        print("ERROR: missing --story <story-id> argument")
+        sys.exit(1)
+
+    audio_dir = get_audio_dir(story_id)
+    print(f"Output dir: {audio_dir}\n")
+
+    with open(json_path) as f:
         lines = json.load(f)
 
     print(f"Generating {len(lines)} audio files...\n")
@@ -108,7 +137,7 @@ def main():
     failed = []
 
     for i, entry in enumerate(lines):
-        filename, ok, detail = generate_one(entry)
+        filename, ok, detail = generate_one(entry, audio_dir)
         if ok:
             print(f"  [{i+1}/{len(lines)}] ✓ {filename} ({detail})")
             succeeded.append(filename)
@@ -127,7 +156,7 @@ def main():
             print(f"  - {name}: {err}")
 
     # Write results
-    results_file = sys.argv[1].replace(".json", "-results.json")
+    results_file = json_path.replace(".json", "-results.json")
     with open(results_file, "w") as f:
         json.dump({
             "succeeded": succeeded,

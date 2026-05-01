@@ -3,29 +3,29 @@ import type { Story } from "../story";
 const base = import.meta.env.BASE_URL;
 
 export const blueyPlaygroundSceneImages: Record<string, string> = {
-  "bluey-playground-opening": `${base}scenes/bluey-playground-opening.png`,
-  "bluey-playground-approach": `${base}scenes/bluey-playground-approach.png`,
-  "bluey-playground-meet": `${base}scenes/bluey-playground-meet.png`,
-  "bluey-playground-inside": `${base}scenes/bluey-playground-inside.png`,
-  "bluey-playground-cousins": `${base}scenes/bluey-playground-cousins.png`,
-  "bluey-playground-first-choice": `${base}scenes/bluey-playground-first-choice.png`,
-  "bluey-playground-walk": `${base}scenes/bluey-playground-walk.png`,
-  "bluey-playground-bikes": `${base}scenes/bluey-playground-bikes.png`,
-  "bluey-playground-arrival": `${base}scenes/bluey-playground-arrival.png`,
-  "bluey-playground-swings": `${base}scenes/bluey-playground-swings.png`,
-  "bluey-playground-second-choice": `${base}scenes/bluey-playground-second-choice.png`,
-  "bluey-playground-climbing": `${base}scenes/bluey-playground-climbing.png`,
-  "bluey-playground-sandpit": `${base}scenes/bluey-playground-sandpit.png`,
-  "bluey-playground-nana": `${base}scenes/bluey-playground-nana.png`,
-  "bluey-playground-goodbye": `${base}scenes/bluey-playground-goodbye.png`,
-  "bluey-playground-end": `${base}scenes/bluey-playground-end.png`,
+  "bluey-playground-opening": `${base}stories/bluey-playground/scenes/bluey-playground-opening.png`,
+  "bluey-playground-approach": `${base}stories/bluey-playground/scenes/bluey-playground-approach.png`,
+  "bluey-playground-meet": `${base}stories/bluey-playground/scenes/bluey-playground-meet.png`,
+  "bluey-playground-inside": `${base}stories/bluey-playground/scenes/bluey-playground-inside.png`,
+  "bluey-playground-cousins": `${base}stories/bluey-playground/scenes/bluey-playground-cousins.png`,
+  "bluey-playground-first-choice": `${base}stories/bluey-playground/scenes/bluey-playground-first-choice.png`,
+  "bluey-playground-walk": `${base}stories/bluey-playground/scenes/bluey-playground-walk.png`,
+  "bluey-playground-bikes": `${base}stories/bluey-playground/scenes/bluey-playground-bikes.png`,
+  "bluey-playground-arrival": `${base}stories/bluey-playground/scenes/bluey-playground-arrival.png`,
+  "bluey-playground-swings": `${base}stories/bluey-playground/scenes/bluey-playground-swings.png`,
+  "bluey-playground-second-choice": `${base}stories/bluey-playground/scenes/bluey-playground-second-choice.png`,
+  "bluey-playground-climbing": `${base}stories/bluey-playground/scenes/bluey-playground-climbing.png`,
+  "bluey-playground-sandpit": `${base}stories/bluey-playground/scenes/bluey-playground-sandpit.png`,
+  "bluey-playground-nana": `${base}stories/bluey-playground/scenes/bluey-playground-nana.png`,
+  "bluey-playground-goodbye": `${base}stories/bluey-playground/scenes/bluey-playground-goodbye.png`,
+  "bluey-playground-end": `${base}stories/bluey-playground/scenes/bluey-playground-end.png`,
 };
 
 export const blueyPlayground: Story = {
   id: "bluey-playground",
   title: "Mia Meets the Heelers!",
   subtitle: "Bluey Family",
-  coverImage: `${base}scenes/bluey-playground-opening.png`,
+  coverImage: `${base}stories/bluey-playground/scenes/bluey-playground-opening.png`,
   firstSceneId: "bluey-playground-opening",
   endSceneId: "bluey-playground-end",
   audioManifest: {
@@ -194,8 +194,8 @@ export const blueyPlayground: Story = {
       characters: ["Mia", "Bluey", "Bingo", "Bandit", "Chilli"],
       background: "heeler-front-door",
       choices: [
-        { label: "Walk Together!", nextScene: "bluey-playground-walk", image: "choices/bluey-playground-choice-walk.jpg" },
-        { label: "Ride Bikes!", nextScene: "bluey-playground-bikes", image: "choices/bluey-playground-choice-bikes.jpg" },
+        { label: "Walk Together!", nextScene: "bluey-playground-walk", image: "stories/bluey-playground/images/bluey-playground-choice-walk.jpg" },
+        { label: "Ride Bikes!", nextScene: "bluey-playground-bikes", image: "stories/bluey-playground/images/bluey-playground-choice-bikes.jpg" },
       ],
     },
     "bluey-playground-walk": {
@@ -232,8 +232,8 @@ export const blueyPlayground: Story = {
       characters: ["Mia", "Bluey", "Bingo"],
       background: "playground-second-choice",
       choices: [
-        { label: "Climbing Frame!", nextScene: "bluey-playground-climbing", image: "choices/bluey-playground-choice-climbing.jpg" },
-        { label: "Sandpit City!", nextScene: "bluey-playground-sandpit", image: "choices/bluey-playground-choice-sandpit.jpg" },
+        { label: "Climbing Frame!", nextScene: "bluey-playground-climbing", image: "stories/bluey-playground/images/bluey-playground-choice-climbing.jpg" },
+        { label: "Sandpit City!", nextScene: "bluey-playground-sandpit", image: "stories/bluey-playground/images/bluey-playground-choice-sandpit.jpg" },
       ],
     },
     "bluey-playground-climbing": {

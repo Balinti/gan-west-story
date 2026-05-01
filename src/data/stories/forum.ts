@@ -3,29 +3,29 @@ import type { Story } from "../story";
 const base = import.meta.env.BASE_URL;
 
 export const forumSceneImages: Record<string, string> = {
-  "forum-opening": `${base}scenes/forum-opening.png`,
-  "forum-arrival": `${base}scenes/forum-arrival.png`,
-  "forum-shoes-off": `${base}scenes/forum-shoes-off.png`,
-  "forum-first-choice": `${base}scenes/forum-first-choice.png`,
-  "forum-ball-pit": `${base}scenes/forum-ball-pit.png`,
-  "forum-slides": `${base}scenes/forum-slides.png`,
-  "forum-dante-waits": `${base}scenes/forum-dante-waits.png`,
-  "forum-tunnel-crawl": `${base}scenes/forum-tunnel-crawl.png`,
-  "forum-second-choice": `${base}scenes/forum-second-choice.png`,
-  "forum-trampoline": `${base}scenes/forum-trampoline.png`,
-  "forum-kitchen": `${base}scenes/forum-kitchen.png`,
-  "forum-snack-time": `${base}scenes/forum-snack-time.png`,
-  "forum-dance-party": `${base}scenes/forum-dance-party.png`,
-  "forum-tired-kids": `${base}scenes/forum-tired-kids.png`,
-  "forum-goodbye": `${base}scenes/forum-goodbye.png`,
-  "forum-end": `${base}scenes/forum-end.png`,
+  "forum-opening": `${base}stories/forum/scenes/forum-opening.png`,
+  "forum-arrival": `${base}stories/forum/scenes/forum-arrival.png`,
+  "forum-shoes-off": `${base}stories/forum/scenes/forum-shoes-off.png`,
+  "forum-first-choice": `${base}stories/forum/scenes/forum-first-choice.png`,
+  "forum-ball-pit": `${base}stories/forum/scenes/forum-ball-pit.png`,
+  "forum-slides": `${base}stories/forum/scenes/forum-slides.png`,
+  "forum-dante-waits": `${base}stories/forum/scenes/forum-dante-waits.png`,
+  "forum-tunnel-crawl": `${base}stories/forum/scenes/forum-tunnel-crawl.png`,
+  "forum-second-choice": `${base}stories/forum/scenes/forum-second-choice.png`,
+  "forum-trampoline": `${base}stories/forum/scenes/forum-trampoline.png`,
+  "forum-kitchen": `${base}stories/forum/scenes/forum-kitchen.png`,
+  "forum-snack-time": `${base}stories/forum/scenes/forum-snack-time.png`,
+  "forum-dance-party": `${base}stories/forum/scenes/forum-dance-party.png`,
+  "forum-tired-kids": `${base}stories/forum/scenes/forum-tired-kids.png`,
+  "forum-goodbye": `${base}stories/forum/scenes/forum-goodbye.png`,
+  "forum-end": `${base}stories/forum/scenes/forum-end.png`,
 };
 
 export const forum: Story = {
   id: "forum",
   title: "Playground Day!",
   subtitle: "L.A. Friends",
-  coverImage: `${base}scenes/forum-opening.png`,
+  coverImage: `${base}stories/forum/scenes/forum-opening.png`,
   firstSceneId: "forum-opening",
   endSceneId: "forum-end",
   audioManifest: {
@@ -172,8 +172,8 @@ export const forum: Story = {
       characters: ["Mia", "Sophia", "Givi", "Alexander"],
       background: "playground-inside",
       choices: [
-        { label: "Ball Pit!", nextScene: "forum-ball-pit", image: "choices/forum-ball-pit.jpg" },
-        { label: "Slides!", nextScene: "forum-slides", image: "choices/forum-slides.jpg" },
+        { label: "Ball Pit!", nextScene: "forum-ball-pit", image: "stories/forum/images/forum-ball-pit.jpg" },
+        { label: "Slides!", nextScene: "forum-slides", image: "stories/forum/images/forum-slides.jpg" },
       ],
     },
     "forum-ball-pit": {
@@ -210,8 +210,8 @@ export const forum: Story = {
       characters: ["David", "Mia", "Sophia", "Givi", "Alexander"],
       background: "playground-inside",
       choices: [
-        { label: "Trampolines!", nextScene: "forum-trampoline", image: "choices/forum-trampoline.jpg" },
-        { label: "Pretend Kitchen!", nextScene: "forum-kitchen", image: "choices/forum-kitchen.jpg" },
+        { label: "Trampolines!", nextScene: "forum-trampoline", image: "stories/forum/images/forum-trampoline.jpg" },
+        { label: "Pretend Kitchen!", nextScene: "forum-kitchen", image: "stories/forum/images/forum-kitchen.jpg" },
       ],
     },
     "forum-trampoline": {

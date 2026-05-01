@@ -3,29 +3,29 @@ import type { Story } from "../story";
 const base = import.meta.env.BASE_URL;
 
 export const gardenBugsSceneImages: Record<string, string> = {
-  "garden-bugs-opening": `${base}scenes/garden-bugs-opening.png`,
-  "garden-bugs-magnifying": `${base}scenes/garden-bugs-magnifying.png`,
-  "garden-bugs-caterpillar": `${base}scenes/garden-bugs-caterpillar.png`,
-  "garden-bugs-cocoon": `${base}scenes/garden-bugs-cocoon.png`,
-  "garden-bugs-first-choice": `${base}scenes/garden-bugs-first-choice.png`,
-  "garden-bugs-spider": `${base}scenes/garden-bugs-spider.png`,
-  "garden-bugs-log": `${base}scenes/garden-bugs-log.png`,
-  "garden-bugs-discover-both": `${base}scenes/garden-bugs-discover-both.png`,
-  "garden-bugs-butterfly-wait": `${base}scenes/garden-bugs-butterfly-wait.png`,
-  "garden-bugs-butterfly-emerges": `${base}scenes/garden-bugs-butterfly-emerges.png`,
-  "garden-bugs-second-choice": `${base}scenes/garden-bugs-second-choice.png`,
-  "garden-bugs-counting": `${base}scenes/garden-bugs-counting.png`,
-  "garden-bugs-drawing": `${base}scenes/garden-bugs-drawing.png`,
-  "garden-bugs-butterfly-lands": `${base}scenes/garden-bugs-butterfly-lands.png`,
-  "garden-bugs-snack": `${base}scenes/garden-bugs-snack.png`,
-  "garden-bugs-end": `${base}scenes/garden-bugs-end.png`,
+  "garden-bugs-opening": `${base}stories/garden-bugs/scenes/garden-bugs-opening.png`,
+  "garden-bugs-magnifying": `${base}stories/garden-bugs/scenes/garden-bugs-magnifying.png`,
+  "garden-bugs-caterpillar": `${base}stories/garden-bugs/scenes/garden-bugs-caterpillar.png`,
+  "garden-bugs-cocoon": `${base}stories/garden-bugs/scenes/garden-bugs-cocoon.png`,
+  "garden-bugs-first-choice": `${base}stories/garden-bugs/scenes/garden-bugs-first-choice.png`,
+  "garden-bugs-spider": `${base}stories/garden-bugs/scenes/garden-bugs-spider.png`,
+  "garden-bugs-log": `${base}stories/garden-bugs/scenes/garden-bugs-log.png`,
+  "garden-bugs-discover-both": `${base}stories/garden-bugs/scenes/garden-bugs-discover-both.png`,
+  "garden-bugs-butterfly-wait": `${base}stories/garden-bugs/scenes/garden-bugs-butterfly-wait.png`,
+  "garden-bugs-butterfly-emerges": `${base}stories/garden-bugs/scenes/garden-bugs-butterfly-emerges.png`,
+  "garden-bugs-second-choice": `${base}stories/garden-bugs/scenes/garden-bugs-second-choice.png`,
+  "garden-bugs-counting": `${base}stories/garden-bugs/scenes/garden-bugs-counting.png`,
+  "garden-bugs-drawing": `${base}stories/garden-bugs/scenes/garden-bugs-drawing.png`,
+  "garden-bugs-butterfly-lands": `${base}stories/garden-bugs/scenes/garden-bugs-butterfly-lands.png`,
+  "garden-bugs-snack": `${base}stories/garden-bugs/scenes/garden-bugs-snack.png`,
+  "garden-bugs-end": `${base}stories/garden-bugs/scenes/garden-bugs-end.png`,
 };
 
 export const gardenBugs: Story = {
   id: "garden-bugs",
   title: "Bug Hunters of Gan West!",
   subtitle: "Gan West",
-  coverImage: `${base}scenes/garden-bugs-opening.png`,
+  coverImage: `${base}stories/garden-bugs/scenes/garden-bugs-opening.png`,
   firstSceneId: "garden-bugs-opening",
   endSceneId: "garden-bugs-end",
   audioManifest: {
@@ -193,8 +193,8 @@ export const gardenBugs: Story = {
       characters: ["Cru", "Shai", "Mia Alexandra", "Mia Alma"],
       background: "garden-bugs-first-choice",
       choices: [
-        { label: "Follow the spider web!", nextScene: "garden-bugs-spider", image: "choices/garden-bugs-spider.jpg" },
-        { label: "Peek under the log!", nextScene: "garden-bugs-log", image: "choices/garden-bugs-log.jpg" },
+        { label: "Follow the spider web!", nextScene: "garden-bugs-spider", image: "stories/garden-bugs/images/garden-bugs-spider.jpg" },
+        { label: "Peek under the log!", nextScene: "garden-bugs-log", image: "stories/garden-bugs/images/garden-bugs-log.jpg" },
       ],
     },
     "garden-bugs-spider": {
@@ -238,8 +238,8 @@ export const gardenBugs: Story = {
       characters: ["Cru", "Shai", "Mason", "Mia Alexandra"],
       background: "garden-bugs-second-choice",
       choices: [
-        { label: "Count all the bugs!", nextScene: "garden-bugs-counting", image: "choices/garden-bugs-counting.jpg" },
-        { label: "Draw the bugs!", nextScene: "garden-bugs-drawing", image: "choices/garden-bugs-drawing.jpg" },
+        { label: "Count all the bugs!", nextScene: "garden-bugs-counting", image: "stories/garden-bugs/images/garden-bugs-counting.jpg" },
+        { label: "Draw the bugs!", nextScene: "garden-bugs-drawing", image: "stories/garden-bugs/images/garden-bugs-drawing.jpg" },
       ],
     },
     "garden-bugs-counting": {

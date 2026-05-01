@@ -4,11 +4,16 @@ import type { AudioEntry } from "../data/story";
 
 const base = import.meta.env.BASE_URL;
 
-// Build a combined audio manifest from all stories
+// Build a combined audio manifest from all stories.
+// Resolve each entry's audio file to a full URL based on its parent story.id,
+// since audio is now organized under public/stories/<story-id>/audio/.
 const combinedManifest: Record<string, AudioEntry[]> = {};
 for (const story of [...stories, ...Object.values(hiddenStories)]) {
   for (const [sceneId, entries] of Object.entries(story.audioManifest)) {
-    combinedManifest[sceneId] = entries;
+    combinedManifest[sceneId] = entries.map((e) => ({
+      ...e,
+      file: `${base}stories/${story.id}/audio/${e.file}`,
+    }));
   }
 }
 
@@ -62,7 +67,8 @@ export function useSceneAudio(sceneId: string) {
         return;
       }
 
-      const audio = new Audio(`${base}audio/${s[index].file}`);
+      // file is already a full URL (resolved when combinedManifest was built)
+      const audio = new Audio(s[index].file);
       audioRef.current = audio;
       setCurrentSentenceIndex(index);
       setIsPlaying(true);

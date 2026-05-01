@@ -3,29 +3,29 @@ import type { Story } from "../story";
 const base = import.meta.env.BASE_URL;
 
 export const poolSceneImages: Record<string, string> = {
-  "pool-opening": `${base}scenes/pool-opening.png`,
-  "pool-arrival": `${base}scenes/pool-arrival.png`,
-  "pool-sunscreen": `${base}scenes/pool-sunscreen.png`,
-  "pool-first-choice": `${base}scenes/pool-first-choice.png`,
-  "pool-splash": `${base}scenes/pool-splash.png`,
-  "pool-splashpad": `${base}scenes/pool-splashpad.png`,
-  "pool-pizza": `${base}scenes/pool-pizza.png`,
-  "pool-dante-swim": `${base}scenes/pool-dante-swim.png`,
-  "pool-second-choice": `${base}scenes/pool-second-choice.png`,
-  "pool-diving": `${base}scenes/pool-diving.png`,
-  "pool-floats": `${base}scenes/pool-floats.png`,
-  "pool-sunset": `${base}scenes/pool-sunset.png`,
-  "pool-tired": `${base}scenes/pool-tired.png`,
-  "pool-cleanup": `${base}scenes/pool-cleanup.png`,
-  "pool-goodbye": `${base}scenes/pool-goodbye.png`,
-  "pool-end": `${base}scenes/pool-end.png`,
+  "pool-opening": `${base}stories/pool/scenes/pool-opening.png`,
+  "pool-arrival": `${base}stories/pool/scenes/pool-arrival.png`,
+  "pool-sunscreen": `${base}stories/pool/scenes/pool-sunscreen.png`,
+  "pool-first-choice": `${base}stories/pool/scenes/pool-first-choice.png`,
+  "pool-splash": `${base}stories/pool/scenes/pool-splash.png`,
+  "pool-splashpad": `${base}stories/pool/scenes/pool-splashpad.png`,
+  "pool-pizza": `${base}stories/pool/scenes/pool-pizza.png`,
+  "pool-dante-swim": `${base}stories/pool/scenes/pool-dante-swim.png`,
+  "pool-second-choice": `${base}stories/pool/scenes/pool-second-choice.png`,
+  "pool-diving": `${base}stories/pool/scenes/pool-diving.png`,
+  "pool-floats": `${base}stories/pool/scenes/pool-floats.png`,
+  "pool-sunset": `${base}stories/pool/scenes/pool-sunset.png`,
+  "pool-tired": `${base}stories/pool/scenes/pool-tired.png`,
+  "pool-cleanup": `${base}stories/pool/scenes/pool-cleanup.png`,
+  "pool-goodbye": `${base}stories/pool/scenes/pool-goodbye.png`,
+  "pool-end": `${base}stories/pool/scenes/pool-end.png`,
 };
 
 export const pool: Story = {
   id: "pool",
   title: "Rooftop Pool Party!",
   subtitle: "L.A. Friends",
-  coverImage: `${base}scenes/pool-opening.png`,
+  coverImage: `${base}stories/pool/scenes/pool-opening.png`,
   firstSceneId: "pool-opening",
   endSceneId: "pool-end",
   landscape: true,
@@ -173,8 +173,8 @@ export const pool: Story = {
       characters: ["Mia", "Sophia", "Givi", "Alexander"],
       background: "rooftop-pool-overview",
       choices: [
-        { label: "Pool!", nextScene: "pool-splash", image: "choices/pool-splash.jpg" },
-        { label: "Splash Pad!", nextScene: "pool-splashpad", image: "choices/pool-splashpad.jpg" },
+        { label: "Pool!", nextScene: "pool-splash", image: "stories/pool/images/pool-splash.jpg" },
+        { label: "Splash Pad!", nextScene: "pool-splashpad", image: "stories/pool/images/pool-splashpad.jpg" },
       ],
     },
     "pool-splash": {
@@ -211,8 +211,8 @@ export const pool: Story = {
       characters: ["Mia", "Sophia", "Givi", "Alexander"],
       background: "rooftop-pool-overview",
       choices: [
-        { label: "Diving Contest!", nextScene: "pool-diving", image: "choices/pool-diving.jpg" },
-        { label: "Pool Floats!", nextScene: "pool-floats", image: "choices/pool-floats.jpg" },
+        { label: "Diving Contest!", nextScene: "pool-diving", image: "stories/pool/images/pool-diving.jpg" },
+        { label: "Pool Floats!", nextScene: "pool-floats", image: "stories/pool/images/pool-floats.jpg" },
       ],
     },
     "pool-diving": {

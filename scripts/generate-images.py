@@ -43,8 +43,17 @@ BASE_URL = "https://api.kie.ai"
 # Reverted to nano-banana-2 — gpt-image-2 had transparency/checkerboard issues
 # with multi-ref prompts that nano-banana doesn't have.
 MODEL = "nano-banana-2"
-SCENES_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "public", "scenes")
-CHOICES_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "public", "choices")
+PUBLIC_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "public")
+
+
+def get_story_dirs(story_id):
+    """Return (scenes_dir, choices_dir) for the given story id under public/stories/<id>/."""
+    base = os.path.join(PUBLIC_DIR, "stories", story_id)
+    scenes_d = os.path.join(base, "scenes")
+    choices_d = os.path.join(base, "images")
+    os.makedirs(scenes_d, exist_ok=True)
+    os.makedirs(choices_d, exist_ok=True)
+    return scenes_d, choices_d
 
 
 def verify_urls(urls):
@@ -160,17 +169,17 @@ def _resize(src, out, max_dim, as_jpeg=False):
             )
 
 
-def download_and_resize(name, url, is_choice=False):
+def download_and_resize(name, url, scenes_dir, choices_dir, is_choice=False):
     """Download image and resize with sips (macOS) or ImageMagick (Linux)."""
     if is_choice:
-        tmp = os.path.join(CHOICES_DIR, f"{name}.tmp.png")
-        out = os.path.join(CHOICES_DIR, f"{name}.jpg")
+        tmp = os.path.join(choices_dir, f"{name}.tmp.png")
+        out = os.path.join(choices_dir, f"{name}.jpg")
         subprocess.run(["curl", "-s", "-o", tmp, url], timeout=60)
         _resize(tmp, out, 400, as_jpeg=True)
         if os.path.exists(tmp):
             os.remove(tmp)
     else:
-        out = os.path.join(SCENES_DIR, f"{name}.png")
+        out = os.path.join(scenes_dir, f"{name}.png")
         subprocess.run(["curl", "-s", "-o", out, url], timeout=60)
         _resize(out, out, 1200, as_jpeg=False)
     sz = os.path.getsize(out) // 1024
@@ -180,10 +189,34 @@ def download_and_resize(name, url, is_choice=False):
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python3 scripts/generate-images.py scenes.json")
+        print("Usage: python3 scripts/generate-images.py scenes.json --story <story-id>")
+        print("  --story <id>   Story id (folder under public/stories/). Required.")
         sys.exit(1)
 
-    with open(sys.argv[1]) as f:
+    # Parse --story arg
+    story_id = None
+    json_path = None
+    args = sys.argv[1:]
+    i = 0
+    while i < len(args):
+        if args[i] == "--story" and i + 1 < len(args):
+            story_id = args[i + 1]
+            i += 2
+        else:
+            json_path = args[i]
+            i += 1
+    if not json_path:
+        print("ERROR: missing JSON file argument")
+        sys.exit(1)
+    if not story_id:
+        print("ERROR: missing --story <story-id> argument")
+        print("  Each story has its own subfolder under public/stories/")
+        sys.exit(1)
+
+    scenes_dir, choices_dir = get_story_dirs(story_id)
+    print(f"Output dirs: scenes={scenes_dir}, choices/images={choices_dir}")
+
+    with open(json_path) as f:
         scenes = json.load(f)
 
     print(f"Loaded {len(scenes)} scenes.\n")
@@ -226,7 +259,7 @@ def main():
     for name, res in results.items():
         if res["status"] == "success":
             is_choice = any(s.get("is_choice") for s in scenes if s["name"] == name)
-            download_and_resize(name, res["urls"][0], is_choice=is_choice)
+            download_and_resize(name, res["urls"][0], scenes_dir, choices_dir, is_choice=is_choice)
             succeeded.append(name)
         else:
             failed.append((name, res.get("msg", res["status"])))
@@ -239,7 +272,7 @@ def main():
             print(f"  - {name}: {msg}")
 
     # Write results for the validation agent to pick up
-    results_file = sys.argv[1].replace(".json", "-results.json")
+    results_file = json_path.replace(".json", "-results.json")
     with open(results_file, "w") as f:
         json.dump({"succeeded": succeeded, "failed": [f[0] for f in failed]}, f, indent=2)
     print(f"\nResults written to {results_file}")

@@ -1,0 +1,19 @@
+{
+  "succeeded": [
+    "garden-bugs-cocoon",
+    "garden-bugs-spider",
+    "garden-bugs-opening",
+    "garden-bugs-magnifying",
+    "garden-bugs-first-choice",
+    "garden-bugs-discover-both",
+    "garden-bugs-second-choice",
+    "garden-bugs-counting",
+    "garden-bugs-butterfly-emerges",
+    "garden-bugs-butterfly-lands",
+    "garden-bugs-end",
+    "garden-bugs-snack"
+  ],
+  "failed": [
+    "garden-bugs-butterfly-wait"
+  ]
+}

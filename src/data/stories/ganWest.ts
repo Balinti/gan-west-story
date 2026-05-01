@@ -4,31 +4,31 @@ import audioManifest from "../audioManifest.json";
 const base = import.meta.env.BASE_URL;
 
 const sceneImages: Record<string, string> = {
-  opening: `${base}scenes/opening.png`,
-  "arrivals-1": `${base}scenes/arrivals-1.png`,
-  "arrivals-2": `${base}scenes/arrivals-2.png`,
-  "first-choice": `${base}scenes/first-choice.png`,
-  "circle-time": `${base}scenes/circle-time.png`,
-  "free-play": `${base}scenes/free-play.png`,
-  "snack-time": `${base}scenes/snack-time.png`,
-  "story-time": `${base}scenes/story-time.png`,
-  "dance-party": `${base}scenes/dance-party.png`,
-  mystery: `${base}scenes/mystery.png`,
-  "search-playground": `${base}scenes/search-playground.png`,
-  "search-art": `${base}scenes/search-art.png`,
-  "search-sarah": `${base}scenes/search-sarah.png`,
-  "found-sparkle": `${base}scenes/found-sparkle.png`,
-  "art-choice": `${base}scenes/art-choice.png`,
-  "art-challah": `${base}scenes/art-challah.png`,
-  "art-mezuzah": `${base}scenes/art-mezuzah.png`,
-  "outdoor-play": `${base}scenes/outdoor-play.png`,
-  "big-slide": `${base}scenes/big-slide.png`,
-  "sandbox-castle": `${base}scenes/sandbox-castle.png`,
-  "shabbat-prep": `${base}scenes/shabbat-prep.png`,
-  "group-photo": `${base}scenes/group-photo.png`,
-  "goodbye-song": `${base}scenes/goodbye-song.png`,
-  closing: `${base}scenes/closing.png`,
-  end: `${base}scenes/end.png`,
+  opening: `${base}stories/gan-west/scenes/opening.png`,
+  "arrivals-1": `${base}stories/gan-west/scenes/arrivals-1.png`,
+  "arrivals-2": `${base}stories/gan-west/scenes/arrivals-2.png`,
+  "first-choice": `${base}stories/gan-west/scenes/first-choice.png`,
+  "circle-time": `${base}stories/gan-west/scenes/circle-time.png`,
+  "free-play": `${base}stories/gan-west/scenes/free-play.png`,
+  "snack-time": `${base}stories/gan-west/scenes/snack-time.png`,
+  "story-time": `${base}stories/gan-west/scenes/story-time.png`,
+  "dance-party": `${base}stories/gan-west/scenes/dance-party.png`,
+  mystery: `${base}stories/gan-west/scenes/mystery.png`,
+  "search-playground": `${base}stories/gan-west/scenes/search-playground.png`,
+  "search-art": `${base}stories/gan-west/scenes/search-art.png`,
+  "search-sarah": `${base}stories/gan-west/scenes/search-sarah.png`,
+  "found-sparkle": `${base}stories/gan-west/scenes/found-sparkle.png`,
+  "art-choice": `${base}stories/gan-west/scenes/art-choice.png`,
+  "art-challah": `${base}stories/gan-west/scenes/art-challah.png`,
+  "art-mezuzah": `${base}stories/gan-west/scenes/art-mezuzah.png`,
+  "outdoor-play": `${base}stories/gan-west/scenes/outdoor-play.png`,
+  "big-slide": `${base}stories/gan-west/scenes/big-slide.png`,
+  "sandbox-castle": `${base}stories/gan-west/scenes/sandbox-castle.png`,
+  "shabbat-prep": `${base}stories/gan-west/scenes/shabbat-prep.png`,
+  "group-photo": `${base}stories/gan-west/scenes/group-photo.png`,
+  "goodbye-song": `${base}stories/gan-west/scenes/goodbye-song.png`,
+  closing: `${base}stories/gan-west/scenes/closing.png`,
+  end: `${base}stories/gan-west/scenes/end.png`,
 };
 
 export { sceneImages as ganWestSceneImages };
@@ -37,7 +37,7 @@ export const ganWest: Story = {
   id: "gan-west",
   title: "A Day at Gan West",
   subtitle: "An Interactive Story",
-  coverImage: `${base}scenes/opening.png`,
+  coverImage: `${base}stories/gan-west/scenes/opening.png`,
   firstSceneId: "opening",
   endSceneId: "end",
   audioManifest: audioManifest as Story["audioManifest"],
@@ -74,8 +74,8 @@ export const ganWest: Story = {
       characters: ["sarah"],
       background: "classroom",
       choices: [
-        { label: "Circle Time!", nextScene: "circle-time", image: "choices/circle-time.jpg" },
-        { label: "Free Play!", nextScene: "free-play", image: "choices/free-play.jpg" },
+        { label: "Circle Time!", nextScene: "circle-time", image: "stories/gan-west/images/circle-time.jpg" },
+        { label: "Free Play!", nextScene: "free-play", image: "stories/gan-west/images/free-play.jpg" },
       ],
     },
     "circle-time": {
@@ -98,8 +98,8 @@ export const ganWest: Story = {
       characters: ["elizabeth", "cru", "mia-alma", "mason", "aila", "shai", "chaya"],
       background: "snack-table",
       choices: [
-        { label: "Story Time!", nextScene: "story-time", image: "choices/story-time.jpg" },
-        { label: "Dance Party!", nextScene: "dance-party", image: "choices/dance-party.jpg" },
+        { label: "Story Time!", nextScene: "story-time", image: "stories/gan-west/images/story-time.jpg" },
+        { label: "Dance Party!", nextScene: "dance-party", image: "stories/gan-west/images/dance-party.jpg" },
       ],
     },
     "story-time": {
@@ -122,9 +122,9 @@ export const ganWest: Story = {
       characters: ["virginia"],
       background: "classroom",
       choices: [
-        { label: "Check the playground!", nextScene: "search-playground", image: "choices/search-playground.jpg" },
-        { label: "Check the art room!", nextScene: "search-art", image: "choices/search-art.jpg" },
-        { label: "Ask Morah Sara!", nextScene: "search-sarah", image: "choices/ask-morah-sara.jpg" },
+        { label: "Check the playground!", nextScene: "search-playground", image: "stories/gan-west/images/search-playground.jpg" },
+        { label: "Check the art room!", nextScene: "search-art", image: "stories/gan-west/images/search-art.jpg" },
+        { label: "Ask Morah Sara!", nextScene: "search-sarah", image: "stories/gan-west/images/ask-morah-sara.jpg" },
       ],
     },
     "search-playground": {
@@ -161,8 +161,8 @@ export const ganWest: Story = {
       characters: ["joselyn"],
       background: "art-room",
       choices: [
-        { label: "Challah Craft!", nextScene: "art-challah", image: "choices/challah-craft.jpg" },
-        { label: "Mezuzah Decoration!", nextScene: "art-mezuzah", image: "choices/mezuzah-decoration.jpg" },
+        { label: "Challah Craft!", nextScene: "art-challah", image: "stories/gan-west/images/challah-craft.jpg" },
+        { label: "Mezuzah Decoration!", nextScene: "art-mezuzah", image: "stories/gan-west/images/mezuzah-decoration.jpg" },
       ],
     },
     "art-challah": {
@@ -185,8 +185,8 @@ export const ganWest: Story = {
       characters: ["shai", "cru", "desi", "mia-alexandra", "aila", "mia-alma", "mason"],
       background: "playground",
       choices: [
-        { label: "Big Slide!", nextScene: "big-slide", image: "choices/big-slide.jpg" },
-        { label: "Sandbox Castle!", nextScene: "sandbox-castle", image: "choices/sandbox-castle.jpg" },
+        { label: "Big Slide!", nextScene: "big-slide", image: "stories/gan-west/images/big-slide.jpg" },
+        { label: "Sandbox Castle!", nextScene: "sandbox-castle", image: "stories/gan-west/images/sandbox-castle.jpg" },
       ],
     },
     "big-slide": {
@@ -209,8 +209,8 @@ export const ganWest: Story = {
       characters: ["elizabeth", "chaya", "desi", "mia-alexandra"],
       background: "shabbat-table",
       choices: [
-        { label: "Group Photo!", nextScene: "group-photo", image: "choices/group-photo.jpg" },
-        { label: "Goodbye Song!", nextScene: "goodbye-song", image: "choices/goodbye-song.jpg" },
+        { label: "Group Photo!", nextScene: "group-photo", image: "stories/gan-west/images/group-photo.jpg" },
+        { label: "Goodbye Song!", nextScene: "goodbye-song", image: "stories/gan-west/images/goodbye-song.jpg" },
       ],
     },
     "group-photo": {

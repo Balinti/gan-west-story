@@ -3,29 +3,29 @@ import type { Story } from "../story";
 const base = import.meta.env.BASE_URL;
 
 export const ugandaSceneImages: Record<string, string> = {
-  "uganda-opening": `${base}scenes/uganda-opening.png`,
-  "uganda-flight": `${base}scenes/uganda-flight.png`,
-  "uganda-arrival": `${base}scenes/uganda-arrival.png`,
-  "uganda-drive": `${base}scenes/uganda-drive.png`,
-  "uganda-home": `${base}scenes/uganda-home.png`,
-  "uganda-first-choice": `${base}scenes/uganda-first-choice.png`,
-  "uganda-safari": `${base}scenes/uganda-safari.png`,
-  "uganda-lake": `${base}scenes/uganda-lake.png`,
-  "uganda-music": `${base}scenes/uganda-music.png`,
-  "uganda-market": `${base}scenes/uganda-market.png`,
-  "uganda-second-choice": `${base}scenes/uganda-second-choice.png`,
-  "uganda-gorillas": `${base}scenes/uganda-gorillas.png`,
-  "uganda-waterfall": `${base}scenes/uganda-waterfall.png`,
-  "uganda-feast": `${base}scenes/uganda-feast.png`,
-  "uganda-goodbye": `${base}scenes/uganda-goodbye.png`,
-  "uganda-end": `${base}scenes/uganda-end.png`,
+  "uganda-opening": `${base}stories/uganda/scenes/uganda-opening.png`,
+  "uganda-flight": `${base}stories/uganda/scenes/uganda-flight.png`,
+  "uganda-arrival": `${base}stories/uganda/scenes/uganda-arrival.png`,
+  "uganda-drive": `${base}stories/uganda/scenes/uganda-drive.png`,
+  "uganda-home": `${base}stories/uganda/scenes/uganda-home.png`,
+  "uganda-first-choice": `${base}stories/uganda/scenes/uganda-first-choice.png`,
+  "uganda-safari": `${base}stories/uganda/scenes/uganda-safari.png`,
+  "uganda-lake": `${base}stories/uganda/scenes/uganda-lake.png`,
+  "uganda-music": `${base}stories/uganda/scenes/uganda-music.png`,
+  "uganda-market": `${base}stories/uganda/scenes/uganda-market.png`,
+  "uganda-second-choice": `${base}stories/uganda/scenes/uganda-second-choice.png`,
+  "uganda-gorillas": `${base}stories/uganda/scenes/uganda-gorillas.png`,
+  "uganda-waterfall": `${base}stories/uganda/scenes/uganda-waterfall.png`,
+  "uganda-feast": `${base}stories/uganda/scenes/uganda-feast.png`,
+  "uganda-goodbye": `${base}stories/uganda/scenes/uganda-goodbye.png`,
+  "uganda-end": `${base}stories/uganda/scenes/uganda-end.png`,
 };
 
 export const uganda: Story = {
   id: "uganda",
   title: "Uganda Adventure!",
   subtitle: "L.A. Friends",
-  coverImage: `${base}scenes/uganda-opening.png`,
+  coverImage: `${base}stories/uganda/scenes/uganda-opening.png`,
   firstSceneId: "uganda-opening",
   endSceneId: "uganda-end",
   audioManifest: {
@@ -189,8 +189,8 @@ export const uganda: Story = {
       characters: ["GNL Zamba", "Mia", "Sophia", "Givi", "Alexander"],
       background: "uganda-morning",
       choices: [
-        { label: "Safari!", nextScene: "uganda-safari", image: "choices/uganda-safari.jpg" },
-        { label: "Lake Victoria!", nextScene: "uganda-lake", image: "choices/uganda-lake.jpg" },
+        { label: "Safari!", nextScene: "uganda-safari", image: "stories/uganda/images/uganda-safari.jpg" },
+        { label: "Lake Victoria!", nextScene: "uganda-lake", image: "stories/uganda/images/uganda-lake.jpg" },
       ],
     },
     "uganda-safari": {
@@ -227,8 +227,8 @@ export const uganda: Story = {
       characters: ["GNL Zamba", "Mia", "Sophia", "Givi", "Alexander"],
       background: "uganda-morning",
       choices: [
-        { label: "Gorilla Trek!", nextScene: "uganda-gorillas", image: "choices/uganda-gorillas.jpg" },
-        { label: "Waterfall Hike!", nextScene: "uganda-waterfall", image: "choices/uganda-waterfall.jpg" },
+        { label: "Gorilla Trek!", nextScene: "uganda-gorillas", image: "stories/uganda/images/uganda-gorillas.jpg" },
+        { label: "Waterfall Hike!", nextScene: "uganda-waterfall", image: "stories/uganda/images/uganda-waterfall.jpg" },
       ],
     },
     "uganda-gorillas": {
