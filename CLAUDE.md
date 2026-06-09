@@ -9,7 +9,8 @@ public/
 ├── templates/                              ← character refs grouped by family
 │   ├── la-friends/   (Mia.jpg, Sophia.png, Givi.png, Alexander.png, Edoe.png, etc.)
 │   ├── bluey/        (Bluey.png, Bingo.png, Bandit.png, Chilli.png, etc.)
-│   └── gan-west/     (Cru.jpg, Mason.jpg, Mia_Alma.jpg, Mia_Alexandra.jpg, Morah_Sarah.jpg, etc.)
+│   ├── gan-west/     (Cru.jpg, Mason.jpg, Mia_Alma.jpg, Mia_Alexandra.jpg, Morah_Sarah.jpg, etc.)
+│   └── turnip-tale/  (Grandpa.png, Grandma.png, Granddaughter.png, Dog.png, Cat.png, Mouse.png)
 └── stories/                                 ← per-story folders
     └── <story-id>/                          ← e.g. palmsprings, garden-bugs, gan-west
         ├── scenes/   (16 scene PNGs, story-prefix kept in filenames)
@@ -43,6 +44,19 @@ Before ANY image-gen API call:
 - After sign-off, do not re-ask — just run
 
 Wrong claims are treated as a process failure (the protocol failed) not a one-off correction.
+
+## Verified Turnip-Tale Character Descriptions (story: enormous-turnip)
+
+Source-of-truth, generated nano-banana-2 + viewed. Use verbatim in any enormous-turnip prompt. Refs: `https://kidstory.online/templates/turnip-tale/<Name>.png`
+
+| Char | Description (verified from ref) |
+|------|--------------------------------|
+| **Grandpa** | Kind elderly farmer, round chubby rosy face, short WHITE beard, bushy white brows, balding white-sided hair, BLUE denim overalls over red-and-white checked shirt, tan STRAW HAT, brown boots, little round belly |
+| **Grandma** | Kind elderly woman, grey hair in a BUN, small round eyeglasses, rosy cheeks, long FOREST-GREEN dress with RED APRON, brown shoes |
+| **Granddaughter** | ~4yr girl, round rosy face, light-brown hair in TWO PIGTAILS with RED ribbons, sunny YELLOW polka-dot dress with white collar, white socks, red shoes |
+| **Dog** | Small cute farm dog, BROWN & WHITE fur, floppy ears, red collar with gold tag, tongue out, on all fours |
+| **Cat** | Plump ORANGE TABBY, darker orange stripes, white belly & paws, big round GREEN eyes, sits upright |
+| **Mouse** (the hero) | Tiny grey mouse, lighter cream belly, BIG round ears, big black eyes, pink nose, little pink hands/feet, thin curly tail, stands upright |
 
 ## Verified Gan West Character Descriptions
 
