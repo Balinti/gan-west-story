@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Grandpa",
+    "aspect": "9:16",
+    "format": "png",
+    "refs": [],
+    "prompt": "Pixar-style 3D animated character portrait, warm soft lighting, bright cheerful storybook colors, child-friendly. A kind elderly farmer grandpa, full body standing, friendly warm smile. He has a round chubby face with rosy cheeks, a short neat WHITE beard, bushy white eyebrows, twinkly kind eyes, a slightly bald head with white hair on the sides. He wears BLUE denim OVERALLS over a red-and-white checked shirt, a tan STRAW HAT, and brown boots. Gentle grandfatherly proportions, a little round belly. Standing upright, facing forward. SOLID soft cream-beige background — NO checkerboard, NO grid, NO transparency pattern. ONLY Grandpa appears, no other characters. Full body head to toe. Portrait 9:16."
+  },
+  {
+    "name": "Grandma",
+    "aspect": "9:16",
+    "format": "png",
+    "refs": [],
+    "prompt": "Pixar-style 3D animated character portrait, warm soft lighting, bright cheerful storybook colors, child-friendly. A kind elderly grandma, full body standing, warm gentle smile. She has a round friendly face with rosy cheeks, grey hair tied in a neat BUN, small round eyeglasses, twinkly kind eyes. She wears a long FOREST-GREEN dress with a RED APRON over it, and simple brown shoes. Soft grandmotherly proportions. Standing upright, facing forward, hands clasped warmly. SOLID soft cream-beige background — NO checkerboard, NO grid, NO transparency pattern. ONLY Grandma appears, no other characters. Full body head to toe. Portrait 9:16."
+  },
+  {
+    "name": "Granddaughter",
+    "aspect": "9:16",
+    "format": "png",
+    "refs": [],
+    "prompt": "Pixar-style 3D animated character portrait, warm soft lighting, bright cheerful storybook colors, child-friendly. A cute little girl about 4 years old, full body standing, big happy smile. She has a round face with rosy cheeks, big bright eyes, light-brown hair in TWO PIGTAILS tied with red ribbons. She wears a sunny YELLOW dress with a white collar, white socks, and red shoes. Small child proportions, chubby cheeks. Standing upright, facing forward. SOLID soft cream-beige background — NO checkerboard, NO grid, NO transparency pattern. ONLY the little girl appears, no other characters. Full body head to toe. Portrait 9:16."
+  },
+  {
+    "name": "Dog",
+    "aspect": "9:16",
+    "format": "png",
+    "refs": [],
+    "prompt": "Pixar-style 3D animated character portrait, warm soft lighting, bright cheerful storybook colors, child-friendly. A cute small friendly farm dog, full body standing on all four legs, happy expression with tongue slightly out. BROWN and WHITE fur, floppy ears, a small wagging tail, big friendly round eyes, a little red collar. Cartoon-cute, round and huggable proportions. Side-three-quarter view. SOLID soft cream-beige background — NO checkerboard, NO grid, NO transparency pattern. ONLY the dog appears, no other characters or animals. Full body. Portrait 9:16."
+  },
+  {
+    "name": "Cat",
+    "aspect": "9:16",
+    "format": "png",
+    "refs": [],
+    "prompt": "Pixar-style 3D animated character portrait, warm soft lighting, bright cheerful storybook colors, child-friendly. A cute plump ORANGE TABBY cat, full body sitting upright, content happy expression. Orange fur with darker orange tabby stripes, white belly and paws, big round green eyes, perky ears, a fluffy tail curled around. Round huggable cartoon proportions. Facing forward. SOLID soft cream-beige background — NO checkerboard, NO grid, NO transparency pattern. ONLY the cat appears, no other characters or animals. Full body. Portrait 9:16."
+  },
+  {
+    "name": "Mouse",
+    "aspect": "9:16",
+    "format": "png",
+    "refs": [],
+    "prompt": "Pixar-style 3D animated character portrait, warm soft lighting, bright cheerful storybook colors, child-friendly. A tiny adorable grey MOUSE, full body standing upright on two little feet, sweet hopeful smile, the lovable hero. Soft grey fur, a lighter cream belly, BIG round ears, big shiny black eyes, tiny pink nose, little pink hands and feet, a thin curly tail. Very small and cute, big-eyed adorable proportions. Standing upright facing forward. SOLID soft cream-beige background — NO checkerboard, NO grid, NO transparency pattern. ONLY the mouse appears, no other characters or animals. Full body. Portrait 9:16."
+  }
+]

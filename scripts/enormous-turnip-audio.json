@@ -1,0 +1,38 @@
+[
+  { "file": "enormous-turnip-opening_01.mp3", "text": "Grandpa planted a tiny little seed." },
+  { "file": "enormous-turnip-opening_02.mp3", "text": "\"Grow, grow, little turnip!\" he said." },
+
+  { "file": "enormous-turnip-grows_01.mp3", "text": "The turnip grew, and grew, and GREW!" },
+  { "file": "enormous-turnip-grows_02.mp3", "text": "It was so big. It was ENORMOUS!" },
+
+  { "file": "enormous-turnip-grandpa-pulls_01.mp3", "text": "Grandpa pulled the turnip." },
+  { "file": "enormous-turnip-grandpa-pulls_02.mp3", "text": "He pulled and pulled. But it would not come out!" },
+
+  { "file": "enormous-turnip-grandma_01.mp3", "text": "Grandma came to help." },
+  { "file": "enormous-turnip-grandma_02.mp3", "text": "They pulled and pulled. But it would not come out!" },
+
+  { "file": "enormous-turnip-granddaughter_01.mp3", "text": "The little girl came to help." },
+  { "file": "enormous-turnip-granddaughter_02.mp3", "text": "They pulled and pulled. But the turnip was still stuck!" },
+
+  { "file": "enormous-turnip-first-choice_01.mp3", "text": "Who should they call to help?" },
+
+  { "file": "enormous-turnip-dog_01.mp3", "text": "The dog came to help! Woof, woof!" },
+  { "file": "enormous-turnip-dog_02.mp3", "text": "They pulled and pulled. But it was still stuck!" },
+
+  { "file": "enormous-turnip-cat_01.mp3", "text": "The cat came to help! Meow!" },
+  { "file": "enormous-turnip-cat_02.mp3", "text": "They pulled and pulled. But it was still stuck!" },
+
+  { "file": "enormous-turnip-second-choice_01.mp3", "text": "Oh no, it is still stuck!" },
+  { "file": "enormous-turnip-second-choice_02.mp3", "text": "Who can help now?" },
+
+  { "file": "enormous-turnip-mouse-pop_01.mp3", "text": "The tiny little mouse pulled too." },
+  { "file": "enormous-turnip-mouse-pop_02.mp3", "text": "And then... POP!" },
+  { "file": "enormous-turnip-mouse-pop_03.mp3", "text": "Out came the enormous turnip! Everybody tumbled down!" },
+
+  { "file": "enormous-turnip-feast_01.mp3", "text": "Hooray! They made yummy turnip soup." },
+  { "file": "enormous-turnip-feast_02.mp3", "text": "Everyone shared together. The end!" },
+
+  { "file": "enormous-turnip-tomorrow_01.mp3", "text": "It was getting dark." },
+  { "file": "enormous-turnip-tomorrow_02.mp3", "text": "\"Let's try again tomorrow,\" said Grandpa." },
+  { "file": "enormous-turnip-tomorrow_03.mp3", "text": "So they all went inside for a warm, cozy supper. The end!" }
+]
