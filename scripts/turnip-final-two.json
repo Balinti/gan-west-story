@@ -1,0 +1,14 @@
+[
+  {
+    "name": "enormous-turnip-feast",
+    "aspect": "9:16", "format": "png",
+    "refs": ["https://kidstory.online/templates/turnip-tale/Grandpa.png", "https://kidstory.online/templates/turnip-tale/Grandma.png", "https://kidstory.online/templates/turnip-tale/Granddaughter.png", "https://kidstory.online/templates/turnip-tale/Dog.png", "https://kidstory.online/templates/turnip-tale/Cat.png", "https://kidstory.online/templates/turnip-tale/Mouse.png"],
+    "prompt": "3D RENDERED CGI in the exact style of a modern Pixar / DreamWorks animated FILM — volumetric lighting, soft shading, rounded three-dimensional forms. NOT a flat 2D illustration, NOT a painting. Warm cozy golden-sunset scene outside a little cottage. EXACTLY SIX characters gathered happily around a wooden table sharing a big steaming pot of turnip soup: Grandpa (round rosy face, WHITE beard, BLUE denim overalls, red checked shirt, tan STRAW HAT), Grandma (grey BUN, round glasses, GREEN dress, RED APRON), Granddaughter (light-brown TWO PIGTAILS with RED ribbons, YELLOW polka-dot dress), the small BROWN-AND-WHITE floppy-eared Dog (red collar), the plump ORANGE TABBY Cat, and the tiny grey MOUSE sitting in a place of honor on the table beside a tiny bowl. Everyone smiling warmly, bowls of soup, the leafy turnip top as decoration. ONLY these six. Solid fully-rendered background, NO checkerboard, NO grid. Portrait 9:16."
+  },
+  {
+    "name": "enormous-turnip-tomorrow",
+    "aspect": "9:16", "format": "png",
+    "refs": ["https://kidstory.online/templates/turnip-tale/Grandpa.png", "https://kidstory.online/templates/turnip-tale/Grandma.png", "https://kidstory.online/templates/turnip-tale/Granddaughter.png", "https://kidstory.online/templates/turnip-tale/Dog.png", "https://kidstory.online/templates/turnip-tale/Cat.png"],
+    "prompt": "3D RENDERED CGI in the exact style of a modern Pixar / DreamWorks animated FILM — volumetric lighting, soft shading, rounded three-dimensional forms. NOT a flat 2D illustration. A peaceful dusk garden scene, warm orange-purple sunset sky, first stars appearing, cozy lit cottage windows glowing in the background. EXACTLY FIVE characters walking tiredly but contentedly toward the cottage, seen from behind/three-quarter, waving goodnight to the ENORMOUS creamy-white purple-topped leafy turnip still firmly in the ground: Grandpa (WHITE beard, BLUE denim overalls, red checked shirt, tan STRAW HAT), Grandma (grey BUN, round glasses, GREEN dress, RED APRON), Granddaughter (TWO PIGTAILS with RED ribbons, YELLOW polka-dot dress) holding Grandma's hand, the small BROWN-AND-WHITE Dog (red collar), and the plump ORANGE TABBY Cat. Gentle, sleepy, cozy storybook-goodnight mood. ONLY these five — NO mouse. Solid fully-rendered background, NO checkerboard, NO grid. Portrait 9:16."
+  }
+]
